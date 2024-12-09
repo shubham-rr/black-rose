@@ -4,11 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Black Rose</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
     <header>
         <div class="navbar">
+            <h1>Black Rose</h1>
             <ul>
                 <li><a href="index.html">Login</a></li>
                 <li><a href="search.html">Search</a></li>
@@ -17,14 +19,21 @@
         </div>
     </header>
 
-    <form>
-        <label for="username">username :</label>
-        <input type="text" id="username" placeholder="username">
+    <div class="body">
+        <div class="container">
+            <form>
+                <label for="username">username:</label>
+                <input type="text" id="username" placeholder="username">
+                <br>
+                <label for="password">password:</label>
+                <input type="password" id="password" placeholder="password">
+                <br>
+                <button type="submit">Login</button>
+            </form>
+        </div>
+    </div>
 
-        <label for="password">password:</label>
-        <input type="password" id="password" placeholder="password">
+    
 
-        <button type="submit">Login</button>
-    </form>
 </body>
 </html>
