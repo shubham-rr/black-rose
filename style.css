@@ -2,7 +2,16 @@ body {
   margin: 0;
   padding: 0;
   height: 100%;
-  width: 100vw;
+  width: 100%;
+  min-width: 320px;
+  background-color: #fff;
+  overflow-x: hidden;
+}
+
+.page-container {
+    max-width: 100vw;
+    margin: 0 auto;
+    /* padding: 0 20px; */
 }
 
 .navbar {
@@ -30,7 +39,7 @@ body {
 .navbar ul {
     list-style-type: none;
     margin: 0;
-    padding: 0.25rem 0 0 0;
+    padding: 0.25rem 0.5rem 0 0;
     overflow: hidden;
 }
   
@@ -53,6 +62,9 @@ body {
 
 
 .hero-image {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/background.jpg");
     height: 80vh;
     background-position: center;
@@ -191,4 +203,71 @@ body {
 
 .nav-btn.next {
   right: -20px;
+}
+
+footer {
+  background-color: #0f0f0f;
+  color: white;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  padding: 20px 0px 20px 20px;
+}
+
+.footer-top p {
+  margin-top: 0px;
+}
+
+.footer-top span {
+  width: 30%;
+  display: inline-flex;
+}
+
+.footer-logos img {
+  height: 100px;
+  float: right;
+  display: flex;
+  margin-right: 20px;
+}
+
+.team-members {
+    padding: 2rem;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.team-members h1 {
+    margin-bottom: 2rem;
+}
+
+.team-container {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    flex-wrap: wrap;
+}
+
+.team-card {
+    flex: 0 1 300px;
+    padding: 1rem;
+    transition: transform 0.3s ease;
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+}
+
+.team-card img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
+}
+
+.team-card h3 {
+    margin-bottom: 0.5rem;
+}
+
+.team-card p {
+    color: #666;
 }
