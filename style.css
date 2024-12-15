@@ -64,7 +64,7 @@ body {
     width: 100vw;
     margin-left: calc(-50vw + 50%);
     margin-right: calc(-50vw + 50%);
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://placehold.co/2000x1335.png");
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("https://picsum.photos/id/91/2000/1335?blur");
     height: 60vh;
     opacity: 0.9;
     background-position: center;
@@ -312,6 +312,9 @@ footer {
 }
 
 .product-card {
+    text-decoration: none;
+    color: inherit;
+    display: block;
     background: white;
     border-radius: 8px;
     padding: 1rem;
@@ -319,6 +322,9 @@ footer {
     text-align: center;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .product-card:hover {
@@ -353,8 +359,112 @@ footer {
     border-radius: 4px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    margin: auto;
+    margin-top: 10px;
 }
 
 .add-to-cart:hover {
     background: #333;
+}
+
+.model-container {
+    display: flex;
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    padding: 3rem;
+    position: relative;
+    margin: 8rem auto;
+}
+
+.model-container::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #f1f1f1, #ffffff);
+    z-index: -1;
+    border-radius: 10px;
+}
+
+.model-image {
+    flex: 1;
+    border: 1px solid #eee;
+    padding: 8px;
+    background: white;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.model-image img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.model-details {
+    flex: 1;
+    padding: 1rem;
+    background: white;
+    /* border-radius: 4px; */
+    /* box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05); */
+}
+
+.model-details h2 {
+    margin-bottom: 1rem;
+}
+
+.price {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 1.5rem;
+}
+
+.description {
+    margin-bottom: 2rem;
+}
+
+.add-to-cart {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background-color: #000;
+    color: white;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.add-to-cart:hover {
+    background-color: #333;
+}
+
+.scroll-btn {
+    margin-top: 20px;
+    padding: 12px 24px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    align-items: center;
+    gap: 8px;
+    transition: all 0.3s ease;
+    width: 8rem;
+}
+
+.scroll-btn:hover {
+    background-color: white;
+    transform: translateY(2px);
+}
+
+.scroll-btn span {
+    font-size: 16px;
+    font-weight: 500;
 }
