@@ -30,4 +30,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial button visibility check
     prevBtn.style.display = 'none';
+
+    document.querySelector('.scroll-btn').addEventListener('click', () => {
+        const offset = 50; // Adjust this value to control how much higher it scrolls
+        const element = document.querySelector('.popular-categories');
+        const elementPosition = element.getBoundingClientRect().top + window.pageYOffset;
+        
+        window.scrollTo({
+            top: elementPosition - offset,
+            behavior: 'smooth'
+        });
+    });
 });
