@@ -211,23 +211,30 @@ body {
 /* Main content styles */
 .main-content {
   margin: 5rem auto 2rem auto;
-  max-width: 1200px;
-  background: white;
+  max-width: 1300 px;
+  max-height: 375px;
+  background:white;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   padding: 2rem;
   font-family:'Times New Roman', Times, serif;
-  background-image: url("images/_D015101.jpg");
+  background-image: url("images/search.jpg");
   background-size:cover;
+  object-fit: contain;
 }
 
 /* Header styles */
 .search-container h2 {
   text-align: center;
   margin-bottom: 2rem;
-  color:#000000;
+  color:white;
   font-size: 2.5em;
   
+}
+/* filter search */
+.filters {
+  color: white;
+
 }
 
 /* Search form styles */
@@ -243,6 +250,7 @@ body {
   padding: 0.5rem;
   border: 1px solid #ccc;
   border-radius: 5px;
+  color: white;
 }
 
 .search-bar-form button {
@@ -272,13 +280,12 @@ body {
 /* Individual camera item styles */
 .camera-item {
   display: flex;
-  align-items: center;
+  align-items:center;
   border: 1px solid #ccc;
   border-radius: 10px;
   margin-bottom: 1.5rem;
   padding: 1rem;
   background-color: #fff;
-  opacity: 0.75;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 

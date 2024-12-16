@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,70 +8,169 @@
     <link rel="stylesheet" href="style.css">
     <link rel="icon" type="image/png" href="black-rose-favicon.png">
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
-   
 </head>
-<body>
 
+<body>
     <header>
-        <div class="navbar">
-            <h1>
-                <a href="#">BLACK ROSE</a>
-            </h1>
-            <ul>
-                <li><a href="index.html">
+        <nav class="navbar">
+            <h1><a href="#">BLACK ROSE</a></h1>
+            <ul class="nav-icons">
+                <li><a href="index.html" aria-label="Account">
                     <i class="material-icons">account_circle</i>
-                </a></li>                
-                <li><a href="#">
+                </a></li>
+                <li><a href="#" aria-label="Shopping Cart">
                     <i class="material-icons">shopping_cart</i>
                 </a></li>
-                <li><a href="search.html">
+                <li><a href="search.html" aria-label="Search">
                     <i class="material-icons">search</i>
                 </a></li>
             </ul>
-        </div>
+        </nav>
     </header>
-    
 
-    <div class="main-content">
-        <div class="search-container">
+    <div class="main-content"> 
+        <section class="search-container">
             <h2>Search for Cameras</h2>
-            <form class="search-bar-form">
-                <input type="text" id="camera-search-input" placeholder="Search for cameras...">
+            <form class="search-bar-form" action="#" method="get">
+                <input type="text" id="camera-search-input" placeholder="Search for cameras..." aria-label="Search for cameras">
                 <button type="submit">Search</button>
             </form>
-    
+
+            <!-- Filters Section -->
+            <div class="filters">
+                <h3>Filters</h3>
+                <label for="brand-filter">Brand:</label>
+                <select id="brand-filter">
+                    <option value="">All Brands</option>
+                    <option value="Canon">Canon</option>
+                    <option value="Nikon">Nikon</option>
+                    <option value="Sony">Sony</option>
+                    <option value="Fujifilm">Fujifilm</option>
+                </select>
+
+                <label for="price-filter">Price Range:</label>
+                <select id="price-filter">
+                    <option value="">All Prices</option>
+                    <option value="0-1000">$0 - $1,000</option>
+                    <option value="1000-3000">$1,000 - $3,000</option>
+                    <option value="3000+">$3,000+</option>
+                </select>
+            </div>
+
             <div class="camera-results">
                 <h3>Results:</h3>
-                <!-- Product Item 1 -->
-                <div class="camera-item">
-                    <img src="images/CanonEOSR5_online1.webp" alt="Camera 1" class="camera-image">
-                    <div class="camera-details">
-                        <h4>Canon EOS R5</h4>
-                        <p>Price: $3,899</p>
-                        <button>Add to Cart</button>
-                    </div>
+
+                        <!-- Product Item 1 -->
+            <article class="camera-item" data-brand="Canon" data-price="3899">
+                <img src="https://example.com/images/CanonEOSR5_online1.webp" alt="Canon EOS R5 Camera" class="camera-image">
+                <div class="camera-details">
+                    <h4>Canon EOS R5</h4>
+                    <p>Price: $3,899</p>
+                    <button>Add to Cart</button>
                 </div>
-    
-                <!-- Product Item 2 -->
-                <div class="camera-item">
-                    <img src="images/nikon z7 11.webp" alt="Camera 2" class="camera-image">
-                    <div class="camera-details">
-                        <h4>Nikon Z7 II</h4>
-                        <p>Price: $2,999</p>
-                        <button>Add to Cart</button>
-                    </div>
+            </article>
+
+            <!-- Product Item 2 -->
+            <article class="camera-item" data-brand="Nikon" data-price="2999">
+                <img src="https://example.com/images/nikon_z7_ii_online1.webp" alt="Nikon Z7 II Camera" class="camera-image">
+                <div class="camera-details">
+                    <h4>Nikon Z7 II</h4>
+                    <p>Price: $2,999</p>
+                    <button>Add to Cart</button>
                 </div>
-    
-                <!-- Product Item 3 -->
-                <div class="camera-item">
-                    <img src="images/Sony A7 IV.webp" alt="Camera 3" class="camera-image">
-                    <div class="camera-details">
-                        <h4>Sony Alpha 7 IV</h4>
-                        <p>Price: $2,498</p>
-                        <button>Add to Cart</button>
-                    </div>
+            </article>
+
+            <!-- Product Item 3 -->
+            <article class="camera-item" data-brand="Sony" data-price="2498">
+                <img src="https://example.com/images/Sony_A7_IV_online1.webp" alt="Sony Alpha 7 IV Camera" class="camera-image">
+                <div class="camera-details">
+                    <h4>Sony Alpha 7 IV</h4>
+                    <p>Price: $2,498</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 4 -->
+            <article class="camera-item" data-brand="Canon" data-price="1599">
+                <img src="https://example.com/images/canon-eos-90d_online1.webp" alt="Canon EOS 90D" class="camera-image">
+                <div class="camera-details">
+                    <h4>Canon EOS 90D</h4>
+                    <p>Price: $1,599</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 5 -->
+            <article class="camera-item" data-brand="Nikon" data-price="2199">
+                <img src="https://example.com/images/nikon-d850_online1.webp" alt="Nikon D850" class="camera-image">
+                <div class="camera-details">
+                    <h4>Nikon D850</h4>
+                    <p>Price: $2,199</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 6 -->
+            <article class="camera-item" data-brand="Sony" data-price="3498">
+                <img src="https://example.com/images/sony-a9-ii_online1.webp" alt="Sony Alpha 9 II" class="camera-image">
+                <div class="camera-details">
+                    <h4>Sony Alpha 9 II</h4>
+                    <p>Price: $3,498</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 7 -->
+            <article class="camera-item" data-brand="Fujifilm" data-price="1699">
+                <img src="https://example.com/images/fujifilm-x-t4_online1.webp" alt="Fujifilm X-T4" class="camera-image">
+                <div class="camera-details">
+                    <h4>Fujifilm X-T4</h4>
+                    <p>Price: $1,699</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 8 -->
+            <article class="camera-item" data-brand="Fujifilm" data-price="1399">
+                <img src="https://example.com/images/fujifilm-x-t30_online1.webp" alt="Fujifilm X-T30" class="camera-image">
+                <div class="camera-details">
+                    <h4>Fujifilm X-T30</h4>
+                    <p>Price: $1,399</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            <!-- Product Item 9  -->
+            <article class="camera-item" data-brand="Canon" data-price="4999">
+                <img src="https://example.com/images/CanonEOSR6_online1.webp" alt="Canon EOS R6 Camera" class="camera-image">
+                <div class="camera-details">
+                    <h4>Canon EOS R6</h4>
+                    <p>Price: $4,999</p>
+                    <button>Add to Cart</button>
+                </div>
+            </article>
+
+            </div>
+        </section>
+        <footer>
+            <div class="footer-top">
+                <h2>Black Rose</h2>
+                <p>A project built as a part of CodeUp NT Internship Program - TrueBlue IT Services.</p>
+                <div class="footer-logos">
+                    <img src="images/black-rose-favicon.png" alt="">
+                    <img src="images/true-blue-it-logo.png" alt="">
+                    <img src="images/codeupnt-logo.png" alt="">
+                </div>
+                <span>
+                    Black Rose acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respects to Aboriginal and Torres Strait Islanders cultures and to elders past and present.
+                </span>
+                <br>
+                <div class="footer-bottom">
+                    <p>&copy; 2024 Black Rose Group. <p>
                 </div>
             </div>
-        </div>
+        </footer>
     </div>
+
+    <script src="search.js"></script>
     
