@@ -30,7 +30,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Initial button visibility check
     prevBtn.style.display = 'none';
-
+    
+    // Hero section scroll button
     document.querySelector('.scroll-btn').addEventListener('click', () => {
         const offset = 50; // Adjust this value to control how much higher it scrolls
         const element = document.querySelector('.popular-categories');
