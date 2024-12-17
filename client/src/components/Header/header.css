@@ -1,0 +1,53 @@
+.navbar {
+  background-color: #000;
+  overflow: hidden;
+  padding: 0 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  box-sizing: border-box;
+  z-index: 1000;
+}
+
+.navbar h1 {
+  float: left;
+  color: white;
+  margin: 5px;
+  padding: 0.25rem 0 0 0;
+}
+
+.navbar a {
+  text-decoration: none;
+  color: white;
+}
+
+.navbar ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0 1rem 0 0;
+  overflow: hidden;
+}
+
+.navbar li {
+  float: right;
+}
+
+.navbar li a {
+  font-size: 1.2em;
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.navbar li a:hover {
+  background-color: #6b6b6b;
+}
+
+.material-icons {
+  font-size: 24px;
+}
