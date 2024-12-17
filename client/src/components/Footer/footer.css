@@ -181,3 +181,14 @@ footer {
     text-align: justify;
   }
 }
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.footer-description {
+  font-size: 0.9rem;
+  line-height: 1.4;
+}

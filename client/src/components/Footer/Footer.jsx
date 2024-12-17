@@ -3,6 +3,7 @@ import './footer.css';
 import trueBlueITLogo from '../../assets/true-blue-it-logo.png';
 import codeUpNTLogo from '../../assets/codeupnt-logo.png';
 import dihLogo from '../../assets/dih-logo.png';
+import blackRoseLogo from '../../assets/black-rose.png';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -12,10 +13,10 @@ const Footer = () => {
       <div className="footer-content">
         <div className="footer-main">
           <div className="footer-section">
+            <img src={blackRoseLogo} alt="Black Rose Logo" className="footer-logo" />
             <h2>Black Rose</h2>
-            <p>A project built as a part of CodeUp NT Internship Program at TrueBlue IT Services in collaboration with Darwin Innovation Hub.</p>
-            {/* <p>Black Rose is an e-commerce platform designed to meet the unique needs of photographers, providing a wide range of high-quality photography equipment, tools, and accessories.</p> */}
-            </div>
+            <p className="footer-description">A project built as a part of CodeUp NT Internship Program at TrueBlue IT Services in collaboration with Darwin Innovation Hub.</p>
+          </div>
           
           <div className="footer-section sponsors">
             <h3>Our Sponsors</h3>
