@@ -47,22 +47,22 @@ const FeaturedProducts = () => {
       id: 3,
       name: "Product 3",
       price: 149.99,
-      image: "https://picsum.photos/id/250/1080/720",
-      description: "Description for product 3"
+      image: "https://picsum.photos/id/823/1080/720",
+      description: "Description for product 2"
     },
     {
       id: 4,
       name: "Product 4",
       price: 149.99,
-      image: "https://picsum.photos/id/435/1080/720",
-      description: "Description for product 4"
+      image: "https://picsum.photos/id/823/1080/720",
+      description: "Description for product 2"
     },
     {
       id: 5,
       name: "Product 5",
       price: 149.99,
-      image: "https://picsum.photos/id/250/1080/720",
-      description: "Description for product 5"
+      image: "https://picsum.photos/id/823/1080/720",
+      description: "Description for product 2"
     },
     // Add more products as needed
   ];
