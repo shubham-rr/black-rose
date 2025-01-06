@@ -1,7 +1,16 @@
+header{
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 .navbar {
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  align-items: center;
   background-color: #000;
-  overflow: hidden;
-  padding: 0 20px;
+  padding: 10px 20px;
   position: fixed;
   top: 0;
   left: 0;
@@ -11,43 +20,90 @@
   z-index: 1000;
 }
 
+/* Logo (Takes 3 columns) */
 .navbar h1 {
-  float: left;
-  color: white;
-  margin: 5px;
-  padding: 0.25rem 0 0 0;
+  grid-column: 2/span 2;
+  margin: 0;
+  font-size: 1.8rem;
 }
 
-.navbar a {
+.navbar h1 a {
   text-decoration: none;
   color: white;
 }
 
+/* Navigation Menu (Takes 9 columns) */
 .navbar ul {
-  list-style-type: none;
+  grid-column: 10/span 1;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: flex-end;
+  list-style: none;
+  padding: 0;
   margin: 0;
-  padding: 0 1rem 0 0;
-  overflow: hidden;
+  gap: 15px;
 }
 
 .navbar li {
-  float: right;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar li a {
-  font-size: 1.2em;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   color: white;
-  text-align: center;
-  padding: 14px 16px;
   text-decoration: none;
-  cursor: pointer;
+  padding: 14px;
+  transition: background-color 0.3s ease-in-out;
 }
 
 .navbar li a:hover {
   background-color: #6b6b6b;
+  border-radius: 5px;
 }
 
 .material-icons {
   font-size: 24px;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+  .navbar {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .navbar h1 {
+    grid-column: span 4;
+    text-align: left;
+  }
+
+  .navbar ul {
+    grid-column: span 8;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  .navbar {
+    grid-template-columns: repeat(12, 1fr);
+  }
+
+  .navbar h1 {
+    grid-column: span 12;
+    text-align: center;
+  }
+
+  .navbar ul {
+    grid-column: span 12;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .navbar ul {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }

@@ -3,7 +3,16 @@
   padding: 0;
 }
 
+body{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+}
+
 #root {
-  padding: 2rem;
+  grid-column: span 12;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+  /* padding: 2rem; */
   min-height: 100vh;
 }

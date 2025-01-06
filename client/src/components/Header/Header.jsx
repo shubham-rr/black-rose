@@ -1,12 +1,13 @@
-import React from 'react';
-import './header.css';
+import React from "react";
+import { Link } from "react-router-dom";
+import "./header.css";
 
 const Header = () => {
   return (
     <header>
       <div className="navbar">
         <h1>
-          <a href="#">BLACK ROSE</a>
+          <Link to="/">BLACK ROSE</Link>
         </h1>
         <ul>
           <li>
@@ -15,9 +16,10 @@ const Header = () => {
             </a>
           </li>
           <li>
-            <a href="#">
+            {/* Link to the Shopping Cart page */}
+            <Link to="/shopping-cart">
               <i className="material-icons">shopping_cart</i>
-            </a>
+            </Link>
           </li>
           <li>
             <a href="#">
