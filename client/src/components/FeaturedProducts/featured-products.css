@@ -1,5 +1,6 @@
 /* Main container */
 .featured-products {
+  grid-column: span 12;
   padding: 4rem 0;
   font-family: Arial, sans-serif;
   width: 100vw;

@@ -8,25 +8,18 @@ import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 function App() {
   return (
-    <div className="page-container">
-      <Header />
-      <Routes>
-        <Route
-          path="/"
-          element={
-            <>
-              <Hero
-                title="ALL THINGS CAMERAS"
-                subtitle="Capture Life's Moments with Professional Grade Equipment"
-              />
-              <FeaturedProducts />
-            </>
-          }
-        />
-        <Route path="/shopping-cart" element={<ShoppingCart />} />
-      </Routes>
-      <Footer />
-    </div>
+    <><Header /><Routes>
+      <Route
+        path="/"
+        element={<>
+          <Hero
+            title="ALL THINGS CAMERAS"
+            subtitle="Capture Life's Moments with Professional Grade Equipment" />
+          <FeaturedProducts />
+        </>} />
+      <Route path="/shopping-cart" element={<ShoppingCart />} />
+    </Routes><Footer /></>
+    
   );
 }
 

@@ -4,7 +4,7 @@ footer {
   grid-template-columns: repeat(12, 1fr);
   background-color: #111111;
   color: white;
-  width: 100vw;
+  /* width: 100vw; */
   /* margin-left: calc(-50vw + 50%);
   margin-right: calc(-50vw + 50%); */
   font-family: Arial, Helvetica, sans-serif;
@@ -12,24 +12,25 @@ footer {
 }
 
 .footer-content {
-  grid-column: span 12;
+  grid-column: 2/span 10;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  max-width: 1400px;
-  /* margin: 0 auto; */
-  padding: 0 4rem;
+  /* max-width: 1400px; */
   box-sizing: border-box;
 }
 
 .footer-main {
+  grid-column: span 12;
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 6rem;
-  margin-bottom: 3rem;
+  grid-template-columns: repeat(12, 1fr);
+  /* margin-bottom: 3rem; */
 }
 
+.footer-section{
+  grid-column: span 4;
+}
 .footer-section h2 {
-  font-size: 1.8rem;
+  /* font-size: 1.8rem; */
   margin-bottom: 1rem;
   color: #ffffff;
 }
@@ -44,29 +45,35 @@ footer {
   color: #cccccc;
   line-height: 1.6;
   text-align: justify;
+  font-size: 120%;
 }
 
 .sponsors {
+  grid-column: 5 / span 8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end; /* Align content to the right */
   border-left: 1px solid #333;
-  padding-left: 4rem;
+  padding-left: 2rem;
+  text-align: center;
+}
+
+.sponsors h3 {
+  width: 100%;
+  text-align: center; /* Center the heading */
 }
 
 .sponsor-list {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 2rem;
+  justify-content: space-evenly; /* Even spacing */
+  flex-wrap: wrap; /* Adjusts items for different screen sizes */
   width: 100%;
 }
 
 .sponsor-item {
-  text-align: center;
-  transition: transform 0.3s ease;
   flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-width: 250px;
+  text-align: center;
+  /* max-width: 200px; */
 }
 
 .sponsor-item:hover {
@@ -87,12 +94,14 @@ footer {
 }
 
 .sponsor-item p {
-  font-size: 0.9rem;
+  font-size: 120%;
+  font-weight: bold;
   color: #cccccc;
   text-align: center;
 }
 
 .acknowledgment {
+  grid-column: span 12;
   border-top: 1px solid #333;
   border-bottom: 1px solid #333;
   padding: 2rem 0;
@@ -101,20 +110,21 @@ footer {
 }
 
 .acknowledgment p {
-  max-width: 1000px;
+  /* max-width: 1000px; */
   margin: 0 auto;
   line-height: 1.8;
   color: #cccccc;
-  font-size: 0.9rem;
+  /* font-size: 0.9rem; */
   padding: 0 1rem;
   text-align: justify;
 }
 
 .footer-bottom {
+  grid-column: span 12;
   text-align: center;
   padding-top: 1rem;
   color: #888888;
-  font-size: 0.8rem;
+  /* font-size: 0.8rem; */
 }
 
 /* Responsive Design */
@@ -195,6 +205,8 @@ footer {
 }
 
 .footer-description {
-  font-size: 0.9rem;
+
   line-height: 1.4;
+  padding-left:  5%;
+  padding-right: 5%;
 }
