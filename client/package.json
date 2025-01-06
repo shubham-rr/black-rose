@@ -11,25 +11,9 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
     "react-dom": "^18.3.1",
     "react-multi-carousel": "^2.8.5",
     "react-router-dom": "^7.0.2"
-=======
-    "react-dom": "^18.3.1"
->>>>>>> parent of 2910e35 (update: update packages)
-=======
-    "react-dom": "^18.3.1"
->>>>>>> parent of 2910e35 (update: update packages)
-=======
-    "react-dom": "^18.3.1"
->>>>>>> parent of 2910e35 (update: update packages)
-=======
-    "react-dom": "^18.3.1"
->>>>>>> parent of 2910e35 (update: update packages)
   },
   "devDependencies": {
     "@eslint/js": "^9.15.0",
