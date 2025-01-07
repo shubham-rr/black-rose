@@ -8,7 +8,8 @@ import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 function App() {
   return (
-    <><Header /><Routes>
+    <><Header />
+    <Routes>
       <Route
         path="/"
         element={<>
@@ -18,7 +19,8 @@ function App() {
           <FeaturedProducts />
         </>} />
       <Route path="/shopping-cart" element={<ShoppingCart />} />
-    </Routes><Footer /></>
+    </Routes>
+    <Footer /></>
     
   );
 }
