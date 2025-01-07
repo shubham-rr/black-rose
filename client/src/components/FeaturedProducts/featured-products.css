@@ -129,8 +129,21 @@
   left: 10px !important;
 }
 
+.react-multiple-carousel__arrow--left::before {
+  content: "chevron_left" !important;
+}
+
 .react-multiple-carousel__arrow--right {
   right: 10px !important;
+}
+
+.react-multiple-carousel__arrow--right::before {
+  content: "chevron_right" !important;
+}
+
+.react-multiple-carousel__arrow:hover {
+  background: rgba(0, 0, 0, 1) !important;
+  transform: scale(1.1);
 }
 
 /* Carousel list */
