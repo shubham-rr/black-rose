@@ -133,9 +133,7 @@ footer {
     padding: 0 2rem;
   }
 
-  .footer-main {
-    gap: 3rem;
-  }
+
 
   .sponsors {
     padding-left: 2rem;
@@ -153,7 +151,6 @@ footer {
 @media (max-width: 860px) {
   .footer-main {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
 
   .footer-section {
