@@ -92,7 +92,7 @@ const FeaturedProducts = () => {
       <Carousel
         responsive={responsive}
         infinite={true}
-        autoPlay={false}
+        autoPlay={window.innerWidth < 768 ? true : false}  // Autoplay for mobile
         keyBoardControl={true}
         draggable={true}
         swipeable={true}
@@ -105,6 +105,7 @@ const FeaturedProducts = () => {
         centerMode={false}
         partialVisible={false}
       >
+
         {products.map((product) => (
           <div key={product.id} className="product-card">
             <div className="product-image">

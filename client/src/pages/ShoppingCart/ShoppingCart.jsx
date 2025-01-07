@@ -57,7 +57,10 @@ const ShoppingCart = () => {
                 />
                 <div className="cart-item-details">
                   <h2>{item.name}</h2>
-                  <p>Price: ${item.price.toFixed(2)}</p>
+                  <div className="cart-item-price">
+                    <p>Price:</p>
+                    <p>${item.price.toFixed(2)}</p>
+                  </div>
                   <div className="quantity-container">
                     <label>Quantity:</label>
                     <input
