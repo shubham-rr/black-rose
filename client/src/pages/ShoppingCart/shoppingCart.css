@@ -22,7 +22,7 @@
 
 /* Cart Items */
 .cart-items {
-  grid-column: 2/ span 10;
+  grid-column: 3/ span 5;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -30,7 +30,8 @@
 
 /* Individual Cart Item */
 .cart-item {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   align-items: center;
   gap: 20px;
   padding: 15px;
@@ -40,6 +41,7 @@
 }
 
 .cart-item-image {
+  grid-column: span 1;
   width: 100px;
   height: 100px;
   object-fit: cover;
@@ -48,21 +50,32 @@
 
 /* Cart Item Details */
 .cart-item-details {
+  grid-column: span 11;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
   flex-grow: 1;
   text-align: left;
 }
 
 .cart-item-details h2 {
+  grid-column: span 5;
   margin: 0;
   font-size: 1.2rem;
   color: #000;
 }
 
-.cart-item-details p {
-  margin: 5px 0 0;
-  color: #555;
-  font-size: 1rem;
+.cart-item-price{
+  grid-column: 7/span 2;
+  display: block;
+
+  p {
+
+    margin: 5px 0 0;
+    color: #555;
+    font-size: 1rem;
+  }
 }
+
 
 /* Quantity Controls */
 .quantity-container {
@@ -98,22 +111,26 @@
 
 /* Cart Total */
 .cart-total {
-  grid-column: 2/span 10;
-  display: flex;
-  justify-content: space-between;
+  grid-column: 9/span 2;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* justify-content: space-between; */
   align-items: center;
-  margin-top: 20px;
-  padding-top: 20px;
-  border-top: 2px solid #ddd;
+  /* margin-top: 20px; */
+  /* padding-top: 20px; */
+  /* border-left: 2px solid #ddd; */
+  /* padding-left: 30px; */
 }
 
 .cart-total h2 {
+  grid-column: span 2;
   font-size: 1.5rem;
   color: #000;
 }
 
 /* Checkout Button */
 .checkout-button {
+  grid-column: span 2;
   background-color: #0073e6;
   color: white;
   border: none;

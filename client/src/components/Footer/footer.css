@@ -12,7 +12,7 @@ footer {
 }
 
 .footer-content {
-  grid-column: 2/span 10;
+  grid-column: 3/span 8;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   /* max-width: 1400px; */
@@ -150,12 +150,15 @@ footer {
   }
 }
 
-@media (max-width: 768px) {
+@media (max-width: 860px) {
   .footer-main {
     grid-template-columns: 1fr;
     gap: 2rem;
   }
 
+  .footer-section {
+    grid-column: span 12;
+  }
   .sponsors {
     border-left: none;
     padding-left: 0;
