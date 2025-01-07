@@ -22,9 +22,10 @@ const Header = () => {
             </Link>
           </li>
           <li>
-            <a href="#">
+            {/* Link to the Search page */}
+            <Link to="/search">
               <i className="material-icons">search</i>
-            </a>
+            </Link>
           </li>
         </ul>
       </div>

@@ -5,28 +5,28 @@ import Footer from "./components/Footer/Footer";
 import Hero from "./components/Hero/Hero";
 import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
+import SearchPage from "./pages/search/SearchPage";
 
 function App() {
   return (
-    <div className="page-container">
+    <>
       <Header />
       <Routes>
-        <Route
-          path="/"
+        <Route path="/"
           element={
             <>
-              <Hero
+            <Hero
                 title="ALL THINGS CAMERAS"
                 subtitle="Capture Life's Moments with Professional Grade Equipment"
-              />
-              <FeaturedProducts />
-            </>
-          }
-        />
+            />
+            <FeaturedProducts />
+            </>} />
+            
         <Route path="/shopping-cart" element={<ShoppingCart />} />
+        <Route path="/search" element={<SearchPage />} /> 
       </Routes>
       <Footer />
-    </div>
+    </>
   );
 }
 
