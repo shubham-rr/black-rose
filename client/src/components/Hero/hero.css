@@ -23,33 +23,47 @@
 }
 
 .hero-title {
-  font-family: Arial, 'Helvetica', serif;
+  font-family: var(--primary-font);
   font-size: 3.5rem;
   font-weight: 700;
   margin-bottom: 1rem;
+  color: var(--background-white);
 }
 
 .hero-subtitle {
-  font-family: Arial, 'Helvetica', serif;
+  font-family: var(--secondary-font);
   font-size: 1.5rem;
   margin-bottom: 1.5rem;
+  color: var(--background-white);
   opacity: 0.9;
 }
 
 .hero-description {
-  font-family: Arial, 'Helvetica', serif;
+  font-family: var(--secondary-font);
   font-size: 1.1rem;
   margin-bottom: 2rem;
   line-height: 1.6;
+  color: var(--background-white);
   opacity: 0.8;
 }
 
 .hero-cta .btn {
   padding: 0.8rem 2rem;
-  font-family: Arial, 'Helvetica', serif;
+  font-family: var(--secondary-font);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;
+  background-color: var(--accent);
+  border: none;
+  color: var(--background-white);
+  box-shadow: var(--shadow-md);
+  transition: all 0.3s ease;
+}
+
+.hero-cta .btn:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-lg);
+  background-color: var(--primary);
 }
 
 /* Responsive adjustments */

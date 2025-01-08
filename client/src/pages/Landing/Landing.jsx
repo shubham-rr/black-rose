@@ -1,17 +1,22 @@
 import React from 'react';
 import Sponsors from '../../components/Sponsors/Sponsors';
 import Hero from '../../components/Hero/Hero';
-// import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
+import ProductSection from '../../components/ProductSection/ProductSection';
+import { products, sections } from '../../data/products';
 
 function Landing() {
     return (
         <>
-        <Hero
-            title="ALL THINGS CAMERAS"
-            subtitle="Capture Life's Moments with Professional Grade Equipment"
-        />
-        {/* <FeaturedProducts /> */}
-        <Sponsors />
+            <Hero/>
+            {Object.entries(sections).map(([key, section]) => (
+                <ProductSection 
+                    key={key}
+                    title={section.title} 
+                    products={products.filter(section.filter)}
+                    viewAllLink={section.viewAllLink} 
+                />
+            ))}
+            <Sponsors />
         </>
     );
 }

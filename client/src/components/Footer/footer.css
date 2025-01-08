@@ -1,8 +1,8 @@
 /* Custom Footer Styles */
 .footer-custom {
-  background-color: #000000;
-  color: #ffffff;
-  font-family: Arial, 'Helvetica', serif;
+  background-color: var(--background-footer);
+  color: var(--background-white);
+  font-family: var(--secondary-font);
 }
 
 .footer-custom .footer-logo {
@@ -20,7 +20,8 @@
   font-size: 1rem;
   font-weight: 600;
   margin-bottom: 1rem;
-  font-family: Arial, 'Helvetica', serif;
+  font-family: var(--primary-font);
+  color: var(--background-white);
 }
 
 .footer-custom ul li {
@@ -28,18 +29,18 @@
 }
 
 .footer-custom ul li a {
-  color: #a0a0a0;
+  color: var(--text-light);
   text-decoration: none;
   font-size: 0.9rem;
   transition: color 0.2s ease;
 }
 
 .footer-custom ul li a:hover {
-  color: #ffffff;
+  color: var(--background-white);
 }
 
 .footer-custom .social-links a {
-  color: #ffffff;
+  color: var(--background-white);
   text-decoration: none;
   transition: opacity 0.2s ease;
 }
@@ -49,22 +50,23 @@
 }
 
 .footer-custom .footer-bottom {
-  border-color: #333333 !important;
+  border-color: var(--border-dark) !important;
 }
 
 .footer-custom .brand-name {
   font-size: 1.1rem;
   font-weight: 500;
+  color: var(--background-white);
 }
 
 .footer-custom .acknowledgment {
   font-size: 0.9rem;
-  color: #a0a0a0;
+  color: var(--text-light);
 }
 
 .footer-custom .text-muted {
   font-size: 0.8rem;
-  color: #777777 !important;
+  color: var(--text-light) !important;
 }
 
 /* Make sure footer sticks to bottom if content is short */

@@ -1,11 +1,11 @@
 /* NAVBAR */
 .navbar {
   height: 15vh;
-  font-family: serif;
+  font-family: var(--secondary-font);
   font-size: 1em;
   position: relative;
   z-index: 1030;
-  background-color: #000000 !important;
+  background-color: var(--background-dark) !important;
   padding: 0.5rem 0;
 }
 
@@ -27,25 +27,25 @@
     top: 100%;
     left: 0;
     right: 0;
-    background-color: black;
+    background-color: var(--text-dark);
     padding: 1rem;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    box-shadow: var(--shadow-md);
   }
 
   .navbar-nav {
-      gap: 0.5em;
-      text-align: center;
+    gap: 0.5em;
+    text-align: center;
   }
 
   .nav-item {
-      padding: 0.5em 0;
-      color: white;
+    padding: 0.5em 0;
+    color: var(--background-white);
   }
 
   .nav-link {
-      display: inline-block;
-      padding: 0.5em 1em;
-      color: white;
+    display: inline-block;
+    padding: 0.5em 1em;
+    color: var(--background-white);
   }
 }
 
@@ -55,18 +55,18 @@
 }
 
 .nav-link {
-    color: rgba(255, 255, 255, 0.8);
+  color: rgba(255, 255, 255, 0.8);
 }
 
 .nav-link:hover {
-    color: rgb(255, 255, 255);
+  color: var(--background-white);
 }
 
 .nav-link:active,
 .nav-link.active,
 .nav-link:focus,
 .nav-link:visited {
-    color: rgb(255, 255, 255) !important;
+  color: var(--background-white) !important;
 }
 
 /* Ensure the material icons specifically stay white */
@@ -75,7 +75,7 @@
 .nav-link.active .material-icons,
 .nav-link:focus .material-icons,
 .nav-link:visited .material-icons {
-    color: inherit !important;
+  color: inherit !important;
 }
 
 /* Logo styles */
@@ -90,6 +90,51 @@
   object-fit: contain;
 }
 
+/* Search form styles */
+.search-form {
+  flex-grow: 0;
+  width: 500px;
+  margin: 0 auto;
+}
+
+.search-input {
+  background-color: var(--background-white) !important;
+  border: 1px solid var(--border-color) !important;
+  border-right: none !important;
+  color: var(--text-dark) !important;
+  font-family: var(--secondary-font);
+  padding: 0.5rem 1rem;
+  font-size: 0.9rem;
+}
+
+.search-input::placeholder {
+  color: var(--text-light);
+  font-family: var(--secondary-font);
+}
+
+.search-input:focus {
+  background-color: var(--background-white) !important;
+  box-shadow: var(--shadow-sm) !important;
+  border-color: var(--border-color) !important;
+}
+
+.search-button {
+  background-color: var(--background-white) !important;
+  border: 1px solid var(--border-color) !important;
+  border-left: none !important;
+  cursor: pointer;
+  padding: 0.5rem 1rem;
+}
+
+.search-button:hover {
+  background-color: var(--background-light) !important;
+}
+
+.search-button .material-icons {
+  color: var(--text-light) !important;
+  font-size: 1.2rem;
+}
+
 /* Media queries */
 @media (max-width: 991px) {
   .navbar-brand {
@@ -98,6 +143,11 @@
   
   .navbar-logo {
     height: 35px;  /* Slightly smaller for mobile */
+  }
+
+  .search-form {
+    width: 100%;
+    margin: 1rem 0;
   }
 }
 
@@ -108,69 +158,6 @@
 
 /* Style the toggle button border */
 .navbar-toggler {
-  border-color: #000000 !important;
-}
-
-/* Optional: Style the mobile menu background */
-@media (max-width: 991px) {
-  .navbar-collapse {
-    background-color: #000000; /* Solid black background */
-    padding: 1rem;
-    border-radius: 0; /* Remove rounded corners */
-    margin-top: 0; /* Remove gap between navbar and menu */
-  }
-}
-
-/* Search form styles */
-.search-form {
-  flex-grow: 0;
-  width: 500px;
-  margin: 0 auto;
-}
-
-.search-input {
-  background-color: #ffffff !important;
-  border: 1px solid #333333 !important;
-  border-right: none !important;
-  color: #000000 !important;
-  font-family: Arial, 'Helvetica', serif;
-  padding: 0.5rem 1rem;
-  font-size: 0.9rem;
-}
-
-.search-input::placeholder {
-  color: #666666;
-  font-family: Arial, 'Helvetica', serif;
-}
-
-.search-input:focus {
-  background-color: #ffffff !important;
-  box-shadow: none !important;
-  border-color: #444444 !important;
-}
-
-.search-button {
-  background-color: #ffffff !important;
-  border: 1px solid #333333 !important;
-  border-left: none !important;
-  cursor: pointer;
-  padding: 0.5rem 1rem;
-}
-
-.search-button:hover {
-  background-color: #f8f8f8 !important;
-}
-
-.search-button .material-icons {
-  color: #666666 !important;
-  font-size: 1.2rem;
-}
-
-/* Responsive adjustments */
-@media (max-width: 991px) {
-  .search-form {
-    width: 100%;
-    margin: 1rem 0;
-  }
+  border-color: var(--text-dark) !important;
 }
 
