@@ -3,7 +3,7 @@
   display: flex;
   align-items: center;
   position: relative;
-  background: url('../../assets/hero-image.jpg') center/cover no-repeat;
+  background: var(--hero-image) center/cover no-repeat;
   padding: 4rem 0;
 }
 

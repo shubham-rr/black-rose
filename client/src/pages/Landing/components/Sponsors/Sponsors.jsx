@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
-import { sponsors } from '../../data/sponsors';
+import { sponsors } from '../../../../data/sponsors';
 import './Sponsors.css';
 
 function Sponsors() {

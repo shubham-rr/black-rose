@@ -1,7 +1,7 @@
 import React from 'react';
-import Sponsors from '../../components/Sponsors/Sponsors';
-import Hero from '../../components/Hero/Hero';
-import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
+import Sponsors from './components/Sponsors/Sponsors';
+import Hero from './components/Hero/Hero';
+import FeaturedProducts from './components/FeaturedProducts/FeaturedProducts';
 import { products, sections } from '../../data/products';
 
 function Landing() {

@@ -1,10 +1,11 @@
 import React from 'react';
 import { Container, Button, Row, Col } from 'react-bootstrap';
-import './hero.css';
+import heroImage from '../../../../assets/hero-image.jpg';
+import './Hero.css';
 
 const Hero = () => {
   return (
-    <section className="hero-section">
+    <section className="hero-section" style={{'--hero-image': `url(${heroImage})`}}>
       <div className="hero-overlay"></div>
       <Container className="position-relative">
         <Row className="align-items-center">

@@ -1,13 +1,13 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import defaultCamera from '../../assets/default_camera.jpeg';
-import CanonLogo from '../../assets/brand-logos/Canon.svg';
-import NikonLogo from '../../assets/brand-logos/Nikon.jpg';
-import FujifilmLogo from '../../assets/brand-logos/Fujifilm.png';
-import SonyLogo from '../../assets/brand-logos/Sony.svg';
-import PanasonicLogo from '../../assets/brand-logos/Panasonic.svg';
-import OlympusLogo from '../../assets/brand-logos/Olympus.svg';
+import defaultCamera from '../../../../assets/default_camera.jpeg';
+import CanonLogo from '../../../../assets/brand-logos/Canon.svg';
+import NikonLogo from '../../../../assets/brand-logos/Nikon.jpg';
+import FujifilmLogo from '../../../../assets/brand-logos/Fujifilm.png';
+import SonyLogo from '../../../../assets/brand-logos/Sony.svg';
+import PanasonicLogo from '../../../../assets/brand-logos/Panasonic.svg';
+import OlympusLogo from '../../../../assets/brand-logos/Olympus.svg';
 import './FeaturedProducts.css';
 
 const FeaturedProducts = ({ title, products, viewAllLink = '/products' }) => {
