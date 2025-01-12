@@ -8,9 +8,9 @@ import FujifilmLogo from '../../assets/brand-logos/Fujifilm.png';
 import SonyLogo from '../../assets/brand-logos/Sony.svg';
 import PanasonicLogo from '../../assets/brand-logos/Panasonic.svg';
 import OlympusLogo from '../../assets/brand-logos/Olympus.svg';
-import './product-section.css';
+import './FeaturedProducts.css';
 
-const ProductSection = ({ title, products, viewAllLink = '/products' }) => {
+const FeaturedProducts = ({ title, products, viewAllLink = '/products' }) => {
   const getBrandLogo = (brand) => {
     const logos = {
       'Canon': CanonLogo,
@@ -72,4 +72,4 @@ const ProductSection = ({ title, products, viewAllLink = '/products' }) => {
   );
 };
 
-export default ProductSection; 
+export default FeaturedProducts; 

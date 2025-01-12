@@ -1,7 +1,7 @@
 import React from 'react';
 import Sponsors from '../../components/Sponsors/Sponsors';
 import Hero from '../../components/Hero/Hero';
-import ProductSection from '../../components/ProductSection/ProductSection';
+import FeaturedProducts from '../../components/FeaturedProducts/FeaturedProducts';
 import { products, sections } from '../../data/products';
 
 function Landing() {
@@ -9,7 +9,7 @@ function Landing() {
         <>
             <Hero/>
             {Object.entries(sections).map(([key, section]) => (
-                <ProductSection 
+                <FeaturedProducts 
                     key={key}
                     title={section.title} 
                     products={products.filter(section.filter)}
