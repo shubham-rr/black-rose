@@ -19,7 +19,7 @@ const ProductFilters = ({ filters, onFilterChange }) => {
     'Canon',
     'Olympus',
     'Panasonic',
-    'Sony',
+    'SONY',
     'Nikon',
     'Fujifilm'
   ].sort();
