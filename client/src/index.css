@@ -19,6 +19,7 @@
   --primary: #2c3e50;           /* Deep blue-gray for primary elements */
   --secondary: #34495e;         /* Lighter blue-gray for secondary elements */
   --accent: #e7b73c;           /* Gold for accents and CTAs */
+  --accent-red: #c0392b;       /* Red for accents and CTAs */
 
   /* Pure Colors */
   --pure-white: #ffffff;        /* Pure white*/
