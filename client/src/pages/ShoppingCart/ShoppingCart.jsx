@@ -1,5 +1,13 @@
-﻿import React, { useState } from "react";
-import "./ShoppingCart.css";
+﻿import "./Cart.css";
+import React, { useState } from "react";
+
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
 
 const ShoppingCart = () => {
   // Sample cart data
@@ -9,7 +17,7 @@ const ShoppingCart = () => {
       name: "Canon EOS R5 Camera",
       price: 3899,
       quantity: 1,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://www.canon.com.au/-/media/images/canon/products/mirrorless-cameras/eos-r5-temp/1400x960-eos-r5-body-front.ashx",
     },
     {
       id: 2,
@@ -40,6 +48,37 @@ const ShoppingCart = () => {
     0
   );
 
+  // ##############################
+
+  const TAX_RATE = 0.10;
+
+function ccyFormat(num) {
+  return `${num.toFixed(2)}`;
+}
+
+function priceRow(qty, unit) {
+  return qty * unit;
+}
+
+
+function subtotal(items) {
+  return items.map(({ price }) => price).reduce((sum, i) => sum + i, 0);
+}
+
+function ItemSum(qty, unit){
+  return qty * unit;  
+}
+
+function subtotal(items) {
+  return items.reduce((sum, i) => sum + i, 0);
+}
+
+
+const invoiceSubtotal = subtotal(cartItems.map(item => ItemSum(item.quantity, item.price)));
+const invoiceTaxes = TAX_RATE * invoiceSubtotal;
+const invoiceTotal = invoiceTaxes + invoiceSubtotal;
+
+
   return (
     <div className="cart-container">
       <h1>Shopping Cart</h1>
@@ -47,7 +86,76 @@ const ShoppingCart = () => {
         <p>Your cart is empty.</p>
       ) : (
         <>
-          <div className="cart-items">
+          <TableContainer component={Paper} class = "table">
+            <Table sx={{ minWidth: 700 }} aria-label="spanning table">
+              <TableHead>
+                <TableRow>
+                  {/* <TableCell>
+                    <img 
+                      src={row.imageUrl} 
+                      alt={row.name} 
+                      style={{ width: 50, height: 50, objectFit: "cover", borderRadius: 5 }}
+                    />
+                  </TableCell> */}
+                  <TableCell>Desc</TableCell>
+                  <TableCell align="right">Unit</TableCell>
+                  <TableCell align="right">Qty.</TableCell>
+                  {/* <TableCell align="right">Unit</TableCell> */}
+                  <TableCell align="right">Sum</TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                {cartItems.map((row) => (
+                  <TableRow key={row.id}>
+                    <TableCell>
+                      
+                    </TableCell>
+                    <TableCell>{row.name}</TableCell>
+                    <TableCell align="right">{row.price.toFixed(2)}</TableCell>
+                    <TableCell align="right">
+                      <input
+                        type="number"
+                        min="1"
+                        value={row.quantity}
+                        onChange={(e) =>
+                          handleQuantityChange(row.id, parseInt(e.target.value))
+                        }
+                      />
+                    </TableCell>
+                    {/* <TableCell align="right">{row.unit}</TableCell> */}
+                    <TableCell align="right">{ccyFormat(ItemSum(row.quantity, row.price))}</TableCell>
+                  </TableRow>
+                ))}
+                <TableRow>
+                  <TableCell rowSpan={3} />
+                  <TableCell colSpan={2}>Subtotal</TableCell>
+                  <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell>Tax</TableCell>
+                  <TableCell align="right">{`${(TAX_RATE * 100).toFixed(0)} %`}</TableCell>
+                  <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell colSpan={2}>Total</TableCell>
+                  <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+          </TableContainer>
+
+
+        </>
+      )}
+    </div>
+  );
+};
+
+export default ShoppingCart;
+
+
+
+          {/* <div className="cart-items">
             {cartItems.map((item) => (
               <div key={item.id} className="cart-item">
                 <img
@@ -85,11 +193,4 @@ const ShoppingCart = () => {
           <div className="cart-total">
             <h2>Total: ${totalPrice.toFixed(2)}</h2>
             <button className="checkout-button">Proceed to Checkout</button>
-          </div>
-        </>
-      )}
-    </div>
-  );
-};
-
-export default ShoppingCart;
+          </div> */}

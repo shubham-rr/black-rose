@@ -11,6 +11,9 @@
   text-align: center;
 }
 
+.table{
+  grid-column: 2/ span 10;
+}
 /* Cart Title */
 .cart-container h1 {
   grid-column: span 12;
