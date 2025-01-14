@@ -34,6 +34,42 @@ export const products = [
             hotDeal: true,
             popularItem: true
         }
+    },
+    {
+        id: "cam4",
+        brand: "SONY",
+        name: "Sony Alpha a7 III Mirrorless Camera Body",
+        price: 2999.00,
+        image: "/images/products/sony-a7.jpg",
+        categories: {
+            newArrival: false,
+            hotDeal: true,
+            popularItem: true
+        }
+    },
+    {
+        id: "cam5",
+        brand: "Panasonic",
+        name: "Panasonic Lumix DC-S5 Mirrorless Camera Body",
+        price: 1299.00,
+        image: "/images/products/panasonic-s5.jpg",
+        categories: {
+            newArrival: false,
+            hotDeal: true,
+            popularItem: true
+        }
+    },
+    {
+        id: "cam6",
+        brand: "Olympus",
+        name: "Olympus OM-D E-M10 Mark IV Mirrorless Camera Body",
+        price: 1999.00,
+        image: "/images/products/olympus-em10.jpg",
+        categories: {
+            newArrival: false,
+            hotDeal: true,
+            popularItem: true
+        }
     }
 ];
 

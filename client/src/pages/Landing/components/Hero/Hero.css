@@ -47,6 +47,11 @@
   opacity: 0.8;
 }
 
+.hero-button {
+  text-decoration: none;
+  margin-right: 1rem;
+}
+
 .hero-cta .btn {
   padding: 0.8rem 2rem;
   font-family: var(--secondary-font);
@@ -96,6 +101,10 @@
     margin-bottom: 1rem;
     padding: 0.6rem 1.5rem;
     font-size: 0.9rem;
+  }
+
+  .hero-button {
+    margin-right: 0;
   }
 
   .hero-cta {

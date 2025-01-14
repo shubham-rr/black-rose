@@ -10,7 +10,7 @@ function Header() {
   const handleSearch = (e) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
+      navigate(`/products?search=${encodeURIComponent(searchQuery.trim())}`);
       setSearchQuery('');
     }
   };
@@ -46,10 +46,17 @@ function Header() {
               </InputGroup.Text>
             </InputGroup>
           </Form>
-          <ul className="navbar-nav">
+          <ul className="navbar-nav ms-auto">
+            <li className="nav-item me-3">
+              <Link className="nav-link" to="/products">
+                <span className="material-icons">store</span>
+                <span className="nav-text">Shop</span>
+              </Link>
+            </li>
             <li className="nav-item">
               <Link className="nav-link" to="/shopping-cart" aria-label="Shopping Cart">
                 <span className="material-icons">shopping_cart</span>
+                <span className="nav-text">Cart</span>
               </Link>
             </li>
           </ul>

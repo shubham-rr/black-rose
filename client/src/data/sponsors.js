@@ -1,6 +1,6 @@
-import trueBlueITLogo from '../assets/true-blue-it-logo.png';
-import codeUpNTLogo from '../assets/codeupnt-logo.png';
-import dihLogo from '../assets/dih-logo.png';
+import trueBlueITLogo from '../assets/sponsors/true-blue-it-logo.png';
+import codeUpNTLogo from '../assets/sponsors/codeupnt-logo.png';
+import dihLogo from '../assets/sponsors/dih-logo.png';
 
 export const sponsors = [
     {

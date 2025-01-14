@@ -2,6 +2,7 @@ import React from 'react';
 import Sponsors from './components/Sponsors/Sponsors';
 import Hero from './components/Hero/Hero';
 import FeaturedProducts from './components/FeaturedProducts/FeaturedProducts';
+import TopBrands from './components/TopBrands/TopBrands';
 import { products, sections } from '../../data/products';
 
 function Landing() {
@@ -16,6 +17,7 @@ function Landing() {
                     viewAllLink={section.viewAllLink} 
                 />
             ))}
+            <TopBrands />
             <Sponsors />
         </>
     );

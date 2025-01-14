@@ -1,23 +1,21 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route } from 'react-router-dom';
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
-// import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
-// import SearchPage from "./pages/search/SearchPage";
+import ProductsPage from './pages/ProductsPage/ProductsPage';
+import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 
 function App() {
   return (
     <>
-      <div className="app">
-        <Header />
-        <Routes>
-          <Route path="/" element={<Landing />} />
-          {/* <Route path="/shopping-cart" element={<ShoppingCart />} />
-        <Route path="/search" element={<SearchPage />} /> */}
-        </Routes>
-        <Footer />
-      </div>
+      <Header />
+      <Routes>
+        <Route path="/" element={<Landing />} />
+        <Route path="/products" element={<ProductsPage />} />
+        <Route path="/shopping-cart" element={<ShoppingCart />} />
+      </Routes>
+      <Footer />
     </>
   );
 }

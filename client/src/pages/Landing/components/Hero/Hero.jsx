@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { Container, Button, Row, Col } from 'react-bootstrap';
 import heroImage from '../../../../assets/hero-image.jpg';
 import './Hero.css';
@@ -17,7 +18,9 @@ const Hero = () => {
               Whether you're a professional photographer or just starting out, we have the perfect gear for you.
             </p>
             <div className="hero-cta">
-              <Button variant="light" size="lg" className="me-3">Shop Now</Button>
+              <Link to="/products" className="hero-button">
+                <Button variant="light" size="lg">Shop Now</Button>
+              </Link>
               <Button variant="outline-light" size="lg">View Brands</Button>
             </div>
           </Col>
