@@ -6,6 +6,7 @@ import Hero from "./components/Hero/Hero";
 import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import SearchPage from "./pages/search/SearchPage";
+import ContactUs from "./pages/search/contact/ContactUs";
 
 function App() {
   return (
@@ -23,7 +24,9 @@ function App() {
             </>} />
             
         <Route path="/shopping-cart" element={<ShoppingCart />} />
-        <Route path="/search" element={<SearchPage />} /> 
+        <Route path="/search" element={<SearchPage />} />
+        <Route path="/contact-us" element={<ContactUs />} />
+         
       </Routes>
       <Footer />
     </>

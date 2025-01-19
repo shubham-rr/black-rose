@@ -8,6 +8,9 @@ import TableContainer from '@mui/material/TableContainer';
 import TableHead from '@mui/material/TableHead';
 import TableRow from '@mui/material/TableRow';
 import Paper from '@mui/material/Paper';
+import { MdDelete, MdPhotoSizeSelectActual, MdPhotoSizeSelectLarge } from "react-icons/md";
+import { colors, responsiveFontSizes } from "@mui/material";
+
 
 const ShoppingCart = () => {
   // Sample cart data
@@ -24,7 +27,7 @@ const ShoppingCart = () => {
       name: "Nikon Z6 II Camera",
       price: 1999,
       quantity: 2,
-      imageUrl: "https://via.placeholder.com/150",
+      imageUrl: "https://www.jbhifi.com.au/cdn/shop/products/636758-Product-0-I-638209261848324417_029184b6-20c9-43c8-9f4e-61f4775826db.jpg?v=1685329517",
     },
   ]);
 
@@ -39,7 +42,7 @@ const ShoppingCart = () => {
 
   // Function to remove an item
   const handleRemoveItem = (id) => {
-    setCartItems((prevItems) => prevItems.filter((item) => item.id !== id));
+    setCartItems((prevItems) => prevItems.filter((row) => row.id !== id));
   };
 
   // Calculate total price
@@ -86,47 +89,49 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
         <p>Your cart is empty.</p>
       ) : (
         <>
-          <TableContainer component={Paper} class = "table">
-            <Table sx={{ minWidth: 700 }} aria-label="spanning table">
-              <TableHead>
-                <TableRow>
-                  {/* <TableCell>
-                    <img 
+          <TableContainer component={Paper} className = "itemsTable">
+            <Table  aria-label="spanning table">
+            <TableHead>
+              <TableRow>
+              <TableCell sx={{ width: "20%" }}></TableCell> {/* Image Column */}
+              <TableCell sx={{ width: "20%" }}>Desc</TableCell>
+              <TableCell sx={{ width: "15%" }} align="right">Unit</TableCell>
+              <TableCell sx={{ width: "10%" }} align="right">Qty.</TableCell>
+              <TableCell sx={{ width: "10%" }}></TableCell>
+              <TableCell sx={{ width: "5%" }} align="right">Sum</TableCell>
+              </TableRow>
+            </TableHead>
+            <TableBody>
+              {cartItems.map((row) => (
+                <TableRow key={row.id}>
+                  <TableCell>
+                    <img className="cart-item-image"
                       src={row.imageUrl} 
                       alt={row.name} 
-                      style={{ width: 50, height: 50, objectFit: "cover", borderRadius: 5 }}
+                      // style={{ width: 90, height: 90, objectFit: "cover", borderRadius: 5 }}
                     />
-                  </TableCell> */}
-                  <TableCell>Desc</TableCell>
-                  <TableCell align="right">Unit</TableCell>
-                  <TableCell align="right">Qty.</TableCell>
-                  {/* <TableCell align="right">Unit</TableCell> */}
-                  <TableCell align="right">Sum</TableCell>
+                  </TableCell>
+                  <TableCell>{row.name}</TableCell>
+                  <TableCell align="right">{row.price.toFixed(2)}</TableCell>
+                  <TableCell align="right">
+                    <input className="qtyInput"
+                      type="number"
+                      min="1"
+                      value={row.quantity}
+                      onChange={(e) =>
+                        handleQuantityChange(row.id, parseInt(e.target.value))
+                      }
+                    />
+                  </TableCell>
+                  <TableCell sx={{textAlign: "center"}}   >
+                    <button className="remove-button" onClick={() => handleRemoveItem(row.id)}>
+                    <MdDelete size={20} style={{ color: "black", transition: "color 0.2s ease" }} className="delete-icon" />
+                    </button>
+                  </TableCell>
+                  <TableCell align="right">{ccyFormat(ItemSum(row.quantity, row.price))}</TableCell>
                 </TableRow>
-              </TableHead>
-              <TableBody>
-                {cartItems.map((row) => (
-                  <TableRow key={row.id}>
-                    <TableCell>
-                      
-                    </TableCell>
-                    <TableCell>{row.name}</TableCell>
-                    <TableCell align="right">{row.price.toFixed(2)}</TableCell>
-                    <TableCell align="right">
-                      <input
-                        type="number"
-                        min="1"
-                        value={row.quantity}
-                        onChange={(e) =>
-                          handleQuantityChange(row.id, parseInt(e.target.value))
-                        }
-                      />
-                    </TableCell>
-                    {/* <TableCell align="right">{row.unit}</TableCell> */}
-                    <TableCell align="right">{ccyFormat(ItemSum(row.quantity, row.price))}</TableCell>
-                  </TableRow>
                 ))}
-                <TableRow>
+                {/* <TableRow>
                   <TableCell rowSpan={3} />
                   <TableCell colSpan={2}>Subtotal</TableCell>
                   <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
@@ -139,10 +144,35 @@ const invoiceTotal = invoiceTaxes + invoiceSubtotal;
                 <TableRow>
                   <TableCell colSpan={2}>Total</TableCell>
                   <TableCell align="right">{ccyFormat(invoiceTotal)}</TableCell>
+                </TableRow> */}
+              </TableBody>
+            </Table>
+          </TableContainer>
+
+          <TableContainer component={Paper} className="amtTable">
+            <Table aria-label="amount table">
+              <TableHead>
+                <TableRow>
+                  <TableCell colSpan={3} align="left"><strong>Order Summary</strong></TableCell>
+                </TableRow>
+              </TableHead>
+              <TableBody>
+                <TableRow>
+                  <TableCell colSpan={2} align="left">Subtotal</TableCell>
+                  <TableCell align="right">{ccyFormat(invoiceSubtotal)}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell colSpan={2} align="left">Tax ({`${(TAX_RATE * 100).toFixed(0)}%`})</TableCell>
+                  <TableCell align="right">{ccyFormat(invoiceTaxes)}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell colSpan={2} align="left"><strong>Total</strong></TableCell>
+                  <TableCell align="right"><strong>{ccyFormat(invoiceTotal)}</strong></TableCell>
                 </TableRow>
               </TableBody>
             </Table>
           </TableContainer>
+
 
 
         </>
