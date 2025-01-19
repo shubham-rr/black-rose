@@ -74,7 +74,7 @@ const ProductFilters = ({ filters, onFilterChange }) => {
                 { label: "Under $500", value: "0-500" },
                 { label: "$500 - $1000", value: "500-1000" },
                 { label: "$1000 - $2000", value: "1000-2000" },
-                { label: "Over $2000", value: "2000+" },
+                { label: "Over $2000", value: "2000-1000000" },
               ].map((range) => (
                 <Form.Check
                   key={range.value}
