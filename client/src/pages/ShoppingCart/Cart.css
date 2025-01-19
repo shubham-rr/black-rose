@@ -3,7 +3,6 @@
   grid-column: span 12;
   display: grid !important;
   grid-template-columns: repeat(12, 1fr) !important;
-  margin-top: 75px !important;
   padding: 20px 0px;
   background-color: #fff;
   /* border-radius: 8px; */

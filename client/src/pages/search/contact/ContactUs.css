@@ -13,16 +13,11 @@
 }
 
 /* Global Reset */
-* {
+/* * {
     margin: 0;
     padding: 0;
 }
 
-/* Body Styling */
-body {
-    background-color: var(--bg-primary);
-    margin: 7rem 0 5rem 0;
-}
 
 h1 {
     font-size: 25px;
@@ -31,7 +26,7 @@ h1 {
 
 a {
     text-decoration: none;
-}
+} */
 
 
 /* Grid Layout */
