@@ -31,6 +31,9 @@ const ProductFilters = ({ filters, onFilterChange }) => {
     "SONY",
     "Nikon",
     "Fujifilm",
+    'DJI',
+    'GoPro',
+    'Leica',
   ].sort();
 
   return (
