@@ -9,7 +9,7 @@ const SearchPage = () => {
     brands: [],
     minPrice: "",
     maxPrice: "",
-  });a
+  });
   const [selectedProduct, setSelectedProduct] = useState(null); // For product description modal
 
   // Sample product data
