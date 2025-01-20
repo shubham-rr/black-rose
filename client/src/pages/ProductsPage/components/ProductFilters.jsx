@@ -1,27 +1,36 @@
-import { Form, Accordion } from 'react-bootstrap';
+import { Form, Accordion, Button } from "react-bootstrap";
 
 const ProductFilters = ({ filters, onFilterChange }) => {
   const handleFilterChange = (category, value) => {
     const updatedFilters = { ...filters };
     const index = updatedFilters[category].indexOf(value);
-    
+
     if (index === -1) {
       updatedFilters[category] = [...updatedFilters[category], value];
     } else {
-      updatedFilters[category] = updatedFilters[category].filter(item => item !== value);
+      updatedFilters[category] = updatedFilters[category].filter(
+        (item) => item !== value
+      );
     }
-    
+
     onFilterChange(updatedFilters);
+  };
+
+  const handleResetFilters = () => {
+    onFilterChange({
+      brand: [],
+      priceRange: [],
+    });
   };
 
   // Get unique brand names from the logos folder
   const brandOptions = [
-    'Canon',
-    'Olympus',
-    'Panasonic',
-    'Sony',
-    'Nikon',
-    'Fujifilm',
+    "Canon",
+    "Olympus",
+    "Panasonic",
+    "SONY",
+    "Nikon",
+    "Fujifilm",
     'DJI',
     'GoPro',
     'Leica',
@@ -29,19 +38,31 @@ const ProductFilters = ({ filters, onFilterChange }) => {
 
   return (
     <div className="product-filters">
-      <h4>Filters</h4>
-      <Accordion defaultActiveKey={['0']} alwaysOpen>
+      <div className="filter-header">
+        <h4>Filters</h4>
+        <Button
+          onClick={handleResetFilters}
+          style={{
+            backgroundColor: "var(--accent-red)",
+            color: "white",
+            border: "none",
+          }}
+        >
+          Reset
+        </Button>
+      </div>  
+      <Accordion defaultActiveKey={["0"]} alwaysOpen>
         <Accordion.Item eventKey="0">
           <Accordion.Header>Brand</Accordion.Header>
           <Accordion.Body>
             <Form>
-              {brandOptions.map(brand => (
+              {brandOptions.map((brand) => (
                 <Form.Check
                   key={brand}
                   type="checkbox"
                   label={brand}
                   checked={filters.brand.includes(brand)}
-                  onChange={() => handleFilterChange('brand', brand)}
+                  onChange={() => handleFilterChange("brand", brand)}
                 />
               ))}
             </Form>
@@ -53,17 +74,17 @@ const ProductFilters = ({ filters, onFilterChange }) => {
           <Accordion.Body>
             <Form>
               {[
-                { label: 'Under $500', value: '0-500' },
-                { label: '$500 - $1000', value: '500-1000' },
-                { label: '$1000 - $2000', value: '1000-2000' },
-                { label: 'Over $2000', value: '2000+' }
-              ].map(range => (
+                { label: "Under $500", value: "0-500" },
+                { label: "$500 - $1000", value: "500-1000" },
+                { label: "$1000 - $2000", value: "1000-2000" },
+                { label: "Over $2000", value: "2000-1000000" },
+              ].map((range) => (
                 <Form.Check
                   key={range.value}
                   type="checkbox"
                   label={range.label}
                   checked={filters.priceRange.includes(range.value)}
-                  onChange={() => handleFilterChange('priceRange', range.value)}
+                  onChange={() => handleFilterChange("priceRange", range.value)}
                 />
               ))}
             </Form>

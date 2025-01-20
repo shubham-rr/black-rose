@@ -4,7 +4,7 @@ import { Container, Button, Row, Col } from 'react-bootstrap';
 import heroImage from '../../../../assets/hero-image.jpg';
 import './Hero.css';
 
-const Hero = () => {
+const Hero = ({ onViewBrands }) => {
   return (
     <section className="hero-section" style={{'--hero-image': `url(${heroImage})`}}>
       <div className="hero-overlay"></div>
@@ -21,7 +21,13 @@ const Hero = () => {
               <Link to="/products" className="hero-button">
                 <Button variant="light" size="lg">Shop Now</Button>
               </Link>
-              <Button variant="outline-light" size="lg">View Brands</Button>
+              <Button 
+                variant="outline-light" 
+                size="lg" 
+                onClick={onViewBrands}
+              >
+                View Brands
+              </Button>
             </div>
           </Col>
         </Row>

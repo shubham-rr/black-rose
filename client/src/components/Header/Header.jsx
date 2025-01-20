@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Form, InputGroup } from 'react-bootstrap';
+import { MdAccountCircle, MdShoppingCart, MdStore } from "react-icons/md";
 import './Header.css';
 
 function Header() {
@@ -49,14 +50,20 @@ function Header() {
           <ul className="navbar-nav ms-auto">
             <li className="nav-item me-3">
               <Link className="nav-link" to="/products">
-                <span className="material-icons">store</span>
+                <MdStore />
                 <span className="nav-text">Shop</span>
               </Link>
             </li>
             <li className="nav-item">
               <Link className="nav-link" to="/shopping-cart" aria-label="Shopping Cart">
-                <span className="material-icons">shopping_cart</span>
+              <MdShoppingCart /> 
                 <span className="nav-text">Cart</span>
+              </Link>
+            </li>
+            <li className="nav-item">
+              <Link className="nav-link" to="/login" aria-label="Login">
+                <MdAccountCircle />
+                <span className="nav-text">Account</span>
               </Link>
             </li>
           </ul>

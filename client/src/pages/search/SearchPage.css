@@ -1,6 +1,6 @@
-/* General Styling */
+/* General Styling
 body {
-    background: url("client\src\assets\DIH-logo.png");
+    position:relative;
     color: #333;
     margin: 0;
     padding: 0;
@@ -8,10 +8,10 @@ body {
     display: flex;
     justify-content: center;
     min-height: 100vh;
-    padding-top: 20px;
-}
+    padding-top: 120px;
+} */
 
-.cart-container {
+/* .cart-container {
     
     display: flex;
     flex-direction: row;
@@ -23,7 +23,7 @@ body {
     width: 100%;
     gap: 30px;
     box-sizing: border-box;
-}
+} */
 
 
 

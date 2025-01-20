@@ -16,6 +16,7 @@ import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const getBrandLogo = (brand) => {
+    console.log("Brand:", brand);
     const logos = {
       Canon: CanonLogo,
       Nikon: NikonLogo,
@@ -28,7 +29,7 @@ const ProductCard = ({ product }) => {
       DJI : DJILogo,
 
     };
-    return logos[brand] || null;
+    return logos[brand.charAt(0).toUpperCase() + brand.slice(1).toLowerCase()] || null;
   };
 
   return (
