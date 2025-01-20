@@ -16,7 +16,6 @@ import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
   const getBrandLogo = (brand) => {
-    console.log("Brand:", brand);
     const logos = {
       Canon: CanonLogo,
       Nikon: NikonLogo,
