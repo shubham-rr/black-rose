@@ -57,6 +57,10 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /*  ABED's additions to body  */
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  margin: 5rem 0 5rem 0;
 }
 
 h1, h2, h3, h4, h5, h6 {
