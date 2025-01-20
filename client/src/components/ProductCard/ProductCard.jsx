@@ -1,12 +1,17 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
-import defaultCamera from "../../assets/default_camera.jpeg";
+import defaultCamera from "../../assets/brand-logos/default_camera.jpeg";
 import CanonLogo from "../../assets/brand-logos/Canon.svg";
 import NikonLogo from "../../assets/brand-logos/Nikon.jpg";
 import FujifilmLogo from "../../assets/brand-logos/Fujifilm.png";
 import SonyLogo from "../../assets/brand-logos/Sony.svg";
 import PanasonicLogo from "../../assets/brand-logos/Panasonic.svg";
 import OlympusLogo from "../../assets/brand-logos/Olympus.svg";
+import LeicaLogo from "../../assets/brand-logos/Leica.jpg";
+import DJILogo from "../../assets/brand-logos/DJI.png";
+import GoProLogo from "../../assets/brand-logos/GoPro.png"
+
+
 import "./ProductCard.css";
 
 const ProductCard = ({ product }) => {
@@ -18,6 +23,10 @@ const ProductCard = ({ product }) => {
       Sony: SonyLogo,
       Panasonic: PanasonicLogo,
       Olympus: OlympusLogo,
+      Leica: LeicaLogo,
+      GoPro: GoProLogo,
+      DJI : DJILogo,
+
     };
     return logos[brand] || null;
   };
