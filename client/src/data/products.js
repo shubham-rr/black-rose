@@ -412,7 +412,7 @@ export const products = [
         brand: "Fujifilm",
         name: "Fujifilm X-T30",
         price: 899.00,
-        image: "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgfn8hjvh9hGgh9NkQF2Lvgs5-xiz8wPnt7g&s",
+        image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6334/6334297_sd.jpg;maxHeight=2000;maxWidth=2000;format=webp",
         categories: {
             newArrival: true,
             hotDeal: true,

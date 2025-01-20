@@ -1,6 +1,6 @@
 import React from "react";
 import { Button } from 'react-bootstrap';
-import defaultCamera from "../../assets/brand-logos/default_camera.jpeg";
+import defaultCamera from "../../assets/brand-logos/default.png";
 import CanonLogo from "../../assets/brand-logos/Canon.svg";
 import NikonLogo from "../../assets/brand-logos/Nikon.jpg";
 import FujifilmLogo from "../../assets/brand-logos/Fujifilm.png";
