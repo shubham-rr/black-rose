@@ -24,16 +24,13 @@ const ContactUs = () => {
     };
 
     return (
-        <div className="col-start-3 col-span-8">
-            
+        <div className="contact-body ">
             <div className="contact-us">
-                <div className="contact-form-left">
-                    <div className="col-start-4 col-span-6 h-28">
-                        <img className="max-h-72 pt-7" src={assets.contact_img} alt="contact_img" />
-                    </div>
-                    <div className="col-start-2 col-span-10 pt-16">
-                        <h1 className="text-2xl">Contact Us</h1>
-                        <p className="text-lg pt-4">
+                <div className="contact-form-left align-middle">
+                    <img className="contact_img h-56" src={assets.contact_img} alt="contact_img" />
+                    <div className="contact-text">
+                        <h1 className="text-2xl pt-5 pb-2 align-middle">Contact Us</h1>
+                        <p className="text-lg">
                             We'd love to hear from you! Whether you have a question, feedback, or just want to say hello,
                             feel free to reach out to us. We will respond to you in 2-5 business days.
                         </p>
@@ -104,15 +101,24 @@ const ContactUs = () => {
                     </form>
                 </div>
             </div>
-
-            <div className=" text-left my-10 flex flex-col justify-center md:flex-row gap-10 mb-28">
-                <div className="flex flex-col justify-center items-start gap-6">
-                    <p className="text-left font-semibold text-xl text-gray-600">Our Office</p>
-                    <p className="text-gray-500">Darwin Innovation Hub Level 1,<br />48-50 Smith Street Mall,<br />Darwin City NT 0800</p>
-                    <p className="text-gray-500">Email: support@blackrose.com.au</p>
+            <div className="address_container">
+                <div className="address">
+                    <h1 className="font-bold text-xl text-gray-600">Our Office</h1>
+                    <p className="text-gray-500"> Darwin Innovation Hub Level 1,<br />48-50 Smith Street Mall,<br />Darwin City NT 0800</p>
                 </div>
-                <img className="w-full md:max-w-[480px]" src={assets.contact_img} alt="" />
+
+                <div className="hours">
+                    <h1 >Office Hours</h1>
+                    <p className="text-gray-500"> Monday<br />Tuesday<br />Wednesday<br />Thursday<br />Friday<br />Saturday<br />Sunday<br /></p>
+                    <p className="text-base text-gray-500">8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />Closed<br />Closed<br /></p>
+                </div>
+                <div className="addres" style={{ gridColumn:"10/span 2" }}>
+                    <h1 className="font-bold text-xl text-gray-600">Contact Details</h1>
+                    <p className="text-gray-500"> <b>Email:</b> support@blackrose.com.au<br /><b>Phone:</b> +61 412 345 678 </p>
+                </div>
             </div>
+
+
         </div>
     );
 };
