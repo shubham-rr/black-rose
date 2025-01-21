@@ -25,21 +25,12 @@ const ProductFilters = ({ filters, onFilterChange }) => {
 
   // Get unique brand names from the logos folder
   const brandOptions = [
-<<<<<<< HEAD
-    'Canon',
-    'Olympus',
-    'Panasonic',
-    'Sony',
-    'Nikon',
-    'Fujifilm',
-=======
     "Canon",
     "Olympus",
     "Panasonic",
     "SONY",
     "Nikon",
     "Fujifilm",
->>>>>>> 61e7716fbe734bb7e4084e93f52cb1773f791cf5
     'DJI',
     'GoPro',
     'Leica',

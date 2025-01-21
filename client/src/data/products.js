@@ -232,11 +232,7 @@ export const products = [
         brand: "Panasonic",
         name: "Panasonic Lumix G100",
         price: 649.00,
-<<<<<<< HEAD
         image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2021/09/Panasonic_Lumix_G100-04.jpg",
-=======
-        image: "https://www.panasonic.com/content/dam/pim/sg/Lumix/G100-TopView.jpg",
->>>>>>> 61e7716fbe734bb7e4084e93f52cb1773f791cf5
         categories: {
             newArrival: false,
             hotDeal: false,
@@ -248,11 +244,7 @@ export const products = [
         brand: "Leica",
         name: "Leica SL2",
         price: 4999.00,
-<<<<<<< HEAD
         image: "https://overgaard.dk/thorstenovergaardcom_copyrighted_graphics/Leica_SL2_silver_640w-overgaard.jpg",
-=======
-        image: "https://www.leica-camera.com/sites/default/files/2021-09/Leica_SL2_Article_Header_Photography_Hero_2019.jpg",
->>>>>>> 61e7716fbe734bb7e4084e93f52cb1773f791cf5
         categories: {
             newArrival: true,
             hotDeal: false,
@@ -264,11 +256,7 @@ export const products = [
         brand: "GoPro",
         name: "GoPro MAX",
         price: 499.00,
-<<<<<<< HEAD
         image: "https://www.digitaltrends.com/wp-content/uploads/2019/11/gopro-max-review-dm-4.jpg?fit=1500%2C1000&p=1",
-=======
-        image: "https://www.gopro.com/content/dam/gopro/video/hero8_black/overview/hero8_black_2_640.jpg",
->>>>>>> 61e7716fbe734bb7e4084e93f52cb1773f791cf5
         categories: {
             newArrival: false,
             hotDeal: false,
@@ -280,11 +268,7 @@ export const products = [
         brand: "Nikon",
         name: "Nikon D780",
         price: 2299.00,
-<<<<<<< HEAD
         image: "https://www.nikon.com.au/media/wysiwyg/DSLRD780/Tilt-Touchscreen.jpg",
-=======
-        image: "https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d780.html",
->>>>>>> 61e7716fbe734bb7e4084e93f52cb1773f791cf5
         categories: {
             newArrival: true,
             hotDeal: false,
