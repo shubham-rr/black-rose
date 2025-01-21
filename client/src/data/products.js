@@ -25,7 +25,7 @@ export const products = [
     },
     {
         id: "cam3",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony Alpha 7 IV Camera",
         price: 2499.00,
         image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2021/10/Sony_A7_IV_in-hand-PA180998-acr.jpg?resize=1536,1024",
@@ -145,7 +145,7 @@ export const products = [
     },
     {
         id: "cam13",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony RX100 VII",
         price: 1299.00,
         image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2019/09/Sony-RX100-VII-14.jpg",
@@ -205,7 +205,7 @@ export const products = [
     },
     {
         id: "cam18",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony A1",
         price: 6499.00,
         image: "https://www.dpreview.com/files/p/articles/2677095861/DSC_0764.acr.jpeg",
@@ -277,7 +277,7 @@ export const products = [
     },
     {
         id: "cam24",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony A6400",
         price: 899.00,
         image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
@@ -349,7 +349,7 @@ export const products = [
     },
     {
         id: "cam30",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony RX10 IV",
         price: 1799.00,
         image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
@@ -421,7 +421,7 @@ export const products = [
     },
     {
         id: "cam36",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony A7R IV",
         price: 3199.00,
         image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
@@ -469,7 +469,7 @@ export const products = [
     },
     {
         id: "cam40",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony A9 II",
         price: 4499.00,
         image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
@@ -541,7 +541,7 @@ export const products = [
     },
     {
         id: "cam46",
-        brand: "Sony",
+        brand: "SONY",
         name: "Sony A7 III",
         price: 1999.00,
         image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
