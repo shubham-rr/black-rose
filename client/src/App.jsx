@@ -6,7 +6,7 @@ import Hero from "./components/Hero/Hero";
 import FeaturedProducts from "./components/FeaturedProducts/FeaturedProducts";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import SearchPage from "./pages/search/SearchPage";
-import ContactUs from "./pages/search/contact/ContactUs";
+import ContactUs from "./pages/contact/ContactUs";
 
 function App() {
   return (
