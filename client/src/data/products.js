@@ -598,6 +598,18 @@ export const products = [
             hotDeal: false,
             popularItem: false
         }
+    },
+    {
+        id: "cam51",
+        brand: "Leica",
+        name: "Leica M11",
+        price: 8999.00,
+        image: "https://www.dpreview.com/files/p/articles/2330291530/DSC00631.jpg",
+        categories: {
+            newArrival: true,
+            hotDeal: false,
+            popularItem: false
+        }
     }
 ];
 
