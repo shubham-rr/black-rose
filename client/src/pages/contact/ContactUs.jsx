@@ -26,7 +26,7 @@ const ContactUs = () => {
     return (
         <div className="contact-body ">
             <div className="contact-us">
-                <div className="contact-form-left align-middle">
+                <div className="contact-form-left">
                     <img className="contact_img h-56" src={assets.contact_img} alt="contact_img" />
                     <div className="contact-text">
                         <h1 className="text-2xl pt-5 pb-2 align-middle">Contact Us</h1>
@@ -112,7 +112,7 @@ const ContactUs = () => {
                     <p className="text-gray-500"> Monday<br />Tuesday<br />Wednesday<br />Thursday<br />Friday<br />Saturday<br />Sunday<br /></p>
                     <p className="text-base text-gray-500">8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />8:00 am – 5:00 pm<br />Closed<br />Closed<br /></p>
                 </div>
-                <div className="addres" style={{ gridColumn:"10/span 2" }}>
+                <div className="address" style={{ gridColumn:"10/span 2" }}>
                     <h1 className="font-bold text-xl text-gray-600">Contact Details</h1>
                     <p className="text-gray-500"> <b>Email:</b> support@blackrose.com.au<br /><b>Phone:</b> +61 412 345 678 </p>
                 </div>

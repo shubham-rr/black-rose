@@ -3,6 +3,7 @@ import { Container, Row, Col, Image } from 'react-bootstrap';
 import blackRoseLogo from '../../assets/black-rose.png';
 import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
 import './footer.css';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -49,7 +50,7 @@ const Footer = () => {
           <Col xs={6} md={3}>
             <h5>Customer Service</h5>
             <ul className="list-unstyled">
-              <li><a href="#">Contact Us</a></li>
+              <li><Link to="/contact-us">Contact Us</Link></li>
               <li><a href="#">Shipping</a></li>
               <li><a href="#">Duty Free & TRS</a></li>
               <li><a href="#">Returns</a></li>
