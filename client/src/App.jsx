@@ -7,7 +7,7 @@ import Landing from "./pages/Landing/Landing";
 import ProductsPage from './pages/ProductsPage/ProductsPage';
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import SearchPage from "./pages/search/SearchPage";
-import ContactUs from "./pages/search/contact/ContactUs";
+import ContactUs from "./pages/contact/ContactUs";
 
 function App() {
   return (

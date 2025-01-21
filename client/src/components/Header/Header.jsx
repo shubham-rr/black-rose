@@ -1,12 +1,17 @@
+import React from "react";
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { Navbar, Form, InputGroup } from 'react-bootstrap';
 import { MdAccountCircle, MdShoppingCart, MdStore } from "react-icons/md";
-import './Header.css';
+import "./header.css";
 
 function Header() {
   const [searchQuery, setSearchQuery] = useState('');
   const navigate = useNavigate();
+  const [showDropdown, setShowDropdown] = useState(false);
+  const toggleDropdown = () => {
+    setShowDropdown((prev) => !prev);
+  };
 
   const handleSearch = (e) => {
     e.preventDefault();
@@ -60,12 +65,47 @@ function Header() {
                 <span className="nav-text">Cart</span>
               </Link>
             </li>
-            <li className="nav-item">
+            {/* <li className="nav-item">
               <Link className="nav-link" to="/login" aria-label="Login">
                 <MdAccountCircle />
                 <span className="nav-text">Account</span>
               </Link>
+            </li> */}
+
+            <li className="nav-item">
+              <a className="nav-link" href="#" onClick={toggleDropdown}>
+                <MdAccountCircle />
+                <span className="nav-text">Account</span>
+              </a>
+              {showDropdown && (
+                <div className="dropdown-menu">
+                  <Link to="/account-info">Account Information</Link>
+                  <Link to="/address-book">Address Book</Link>
+                  <Link to="/orders">My Orders</Link>
+                  <Link to="/wishlist">My Wishlist</Link>
+                  <Link to="/logout">Logout</Link>
+                </div>
+              )}
             </li>
+            
+
+            {/* <li className="nav-item">
+            <a href="#" onClick={toggleDropdown}>
+              <i className="material-icons">account_circle</i>
+            </a>
+            {showDropdown && (
+              <div className="dropdown-menu">
+                <bLink to="/account-dashoard">Account Dashboard</Link>
+                <Link to="/account-info">Account Information</Link>
+                <Link to="/address-book">Address Book</Link>
+                <Link to="/orders">My Orders</Link>
+                <Link to="/wishlist">My Wishlist</Link>
+                <Link to="/nikon-school">Nikon School Attendance</Link>
+                <Link to="/newsletter">Newsletter Subscriptions</Link>
+                <Link to="/logout">Logout</Link>
+              </div>
+            )}
+          </li> */}
           </ul>
         </Navbar.Collapse>
       </div>
@@ -74,4 +114,3 @@ function Header() {
 }
 
 export default Header;
-
