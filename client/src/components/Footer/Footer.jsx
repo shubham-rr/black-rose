@@ -1,52 +1,86 @@
 import React from 'react';
-import './footer.css';
-import trueBlueITLogo from '../../assets/true-blue-it-logo.png';
-import codeUpNTLogo from '../../assets/codeupnt-logo.png';
-import dihLogo from '../../assets/dih-logo.png';
+import { Container, Row, Col, Image } from 'react-bootstrap';
 import blackRoseLogo from '../../assets/black-rose.png';
+import { FaTwitter, FaInstagram, FaYoutube, FaLinkedin } from 'react-icons/fa';
+import './footer.css';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer>
-      <div className="footer-content">
-        <div className="footer-main">
-          <div className="footer-section">
-            <img src={blackRoseLogo} alt="Black Rose Logo" className="footer-logo" />
-            <h2>Black Rose</h2>
-            <p className="footer-description">A project built as a part of CodeUp NT Internship Program at TrueBlue IT Services in collaboration with Darwin Innovation Hub.</p>
-          </div>
-          
-          <div className="footer-section sponsors">
-            <h3>Our Sponsors</h3>
-            <div className="sponsor-list">
-              <div className="sponsor-item">
-                <img src={trueBlueITLogo} alt="TrueBlue IT Services Logo" />
-                <p>TrueBlue IT Services</p>
-              </div>
-              <div className="sponsor-item">
-                <img src={dihLogo} alt="Darwin Innovation Hub Logo" />
-                <p>Darwin Innovation Hub</p>
-              </div>
-              <div className="sponsor-item">
-                <img src={codeUpNTLogo} alt="CodeUp NT Logo" />
-                <p>CodeUp NT</p>
-              </div>
+    <footer className="footer-custom">
+      <Container>
+        {/* Footer Top Navigation */}
+        <Row className="py-4 footer-nav">
+          <Col xs={12} md={3} className="mb-4 mb-md-0">
+            <div className="social-links">
+              <a href="#" className="me-3"><FaTwitter size={20} /></a>
+              <a href="#" className="me-3"><FaInstagram size={20} /></a>
+              <a href="#" className="me-3"><FaYoutube size={20} /></a>
+              <a href="#"><FaLinkedin size={20} /></a>
             </div>
-          </div>
-        </div>
+          </Col>
+          
+          <Col xs={6} md={3}>
+            <h5>Products</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Cameras</a></li>
+              <li><a href="#">Lenses</a></li>
+              <li><a href="#">Optics</a></li>
+              <li><a href="#">Accessories</a></li>
+              <li><a href="#">Memory & Batteries</a></li>
+              <li><a href="#">Bags, Cases & Housings</a></li>
+            </ul>
+          </Col>
 
-        <div className="acknowledgment">
-          <p>
-            Black Rose acknowledges Traditional Owners of Country throughout Australia and recognises the continuing connection to lands, waters and communities. We pay our respects to Aboriginal and Torres Strait Islanders cultures and to elders past and present.
-          </p>
-        </div>
+          <Col xs={6} md={3}>
+            <h5>Brands</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Canon</a></li>
+              <li><a href="#">Nikon</a></li>
+              <li><a href="#">Olympus</a></li>
+              <li><a href="#">Sony</a></li>
+              <li><a href="#">Panasonic</a></li>
+              <li><a href="#">Fujifilm</a></li>
+              <li><a href="#">Many More..</a></li>
+            </ul>
+          </Col>
 
-        <div className="footer-bottom">
-          <p>&copy; {currentYear} Black Rose Group.</p>
-        </div>
-      </div>
+          <Col xs={6} md={3}>
+            <h5>Customer Service</h5>
+            <ul className="list-unstyled">
+              <li><a href="#">Contact Us</a></li>
+              <li><a href="#">Shipping</a></li>
+              <li><a href="#">Duty Free & TRS</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">FAQ</a></li>
+            </ul>
+          </Col>
+        </Row>
+
+        {/* Footer Bottom */}
+        <Row className="align-items-center py-3 footer-bottom border-top">
+          <Col xs={12} md={4} className="text-center text-md-start mb-2 mb-md-0">
+            <div className="d-flex align-items-center justify-content-center justify-content-md-start">
+              <Image 
+                src={blackRoseLogo} 
+                alt="Black Rose Logo" 
+                className="footer-logo me-2"
+              />
+              <span className="brand-name">Black Rose</span>
+            </div>
+          </Col>
+          
+          <Col xs={12} md={8} className="text-center text-md-end">
+            <p className="acknowledgment mb-0">
+              We acknowledge the Traditional Owners of Country throughout Australia
+            </p>
+            <small className="text-muted">
+              &copy; {currentYear} Black Rose Group
+            </small>
+          </Col>
+        </Row>
+      </Container>
     </footer>
   );
 };
