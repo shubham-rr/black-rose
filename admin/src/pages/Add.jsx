@@ -115,6 +115,12 @@ const Add = ({token}) => {
             <option value="Canon">Canon</option>
             <option value="Nikon">Nikon</option>
             <option value="DJI">DJI</option>
+            <option value="FujiFilm">FujiFilm</option>
+            <option value="Olympus">Olympus</option>
+            <option value="SONY">SONY</option>
+            <option value="Leica">Leica</option>
+            <option value="Panasonic">Panasonic</option>
+            <option value="GoPro">GoPro</option>
             <option value="Other">Other</option>
           </select>
         </div>
