@@ -4,8 +4,6 @@ import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
 
-
-
 const Add = ({token}) => {
 
   const [image1,setImage1] = useState(false)
@@ -17,11 +15,8 @@ const Add = ({token}) => {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('Camera');
-  const [subCategory, setSubCategory] = useState('Other');
+  const [subCategory, setSubCategory] = useState('Canon');
   const [bestSeller, setBestSeller] = useState(false);
-  const [sizes,setSizes] = useState([]);
-
-
 
   const onSubmitHandler = async (e) => {
     e.preventDefault();
@@ -36,7 +31,6 @@ const Add = ({token}) => {
       formData.append("category",category)
       formData.append("subCategory",subCategory)
       formData.append("bestSeller",bestSeller)
-      formData.append("sizes",JSON.stringify(sizes))
 
       image1 && formData.append("image1",image1)
       image2 && formData.append("image2",image2)
@@ -50,7 +44,6 @@ const Add = ({token}) => {
         setName('')
         setDescription('')
         setBestSeller(false)
-        setSizes([])
         setImage1(false)
         setImage2(false)
         setImage3(false)
@@ -119,21 +112,12 @@ const Add = ({token}) => {
         <div>
           <p className='mb-2'>Sub-Category</p>
           <select onChange={(e)=>setSubCategory(e.target.value)} className='w-full px-3 py-2'>
-            <option value="Bags">Bags</option>
-            <option value="Lens">Lens</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
-
-        {/* <div>
-          <p className='mb-2'>Brand</p>
-          <select >
             <option value="Canon">Canon</option>
             <option value="Nikon">Nikon</option>
             <option value="DJI">DJI</option>
             <option value="Other">Other</option>
           </select>
-        </div> */}
+        </div>
       </div>
 
       <div>
@@ -141,32 +125,10 @@ const Add = ({token}) => {
         <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="number" />
       </div>
 
-      <div>
-        <p className='mb-2'>Product Sizes</p>
-        <div className='flex gap-3'>
-          <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter( item => item !== "S") : [...prev,"S"])}>
-            <p className={`${sizes.includes("S") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>S</p>
-          </div>
-          
-          <div onClick={()=>setSizes(prev => prev.includes("M") ? prev.filter( item => item !== "M") : [...prev,"M"])}>
-            <p className={`${sizes.includes("M") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>M</p>
-          </div>
-
-          <div onClick={()=>setSizes(prev => prev.includes("L") ? prev.filter( item => item !== "L") : [...prev,"L"])}>
-            <p className={`${sizes.includes("L") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>L</p>
-          </div>
-
-          <div onClick={()=>setSizes(prev => prev.includes("XL") ? prev.filter( item => item !== "XL") : [...prev,"XL"])}>
-            <p className={`${sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>XL</p>
-          </div>
-        </div>
-      </div>
-
       <div className='flex gap-2 mt-2'>
         <input onChange={()=> setBestSeller (prev => !prev)} checked={bestSeller} type="checkbox" id="bestseller" />
         <label className='cursor-pointer' htmlFor="bestseller">Add to Best Seller</label> 
       </div>
-
 
       <button type="submit" className='w-28 py-3 mt-4 bg-black text-white'>Add</button>
 

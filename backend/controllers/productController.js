@@ -4,7 +4,7 @@ import productModel from "../models/productModel.js"
 // function to add product
 const addProduct = async (req, res) => {
     try {
-        const { name, description, price, category, subCategory, sizes, colour, bestseller } = req.body
+        const { name, description, price, category, subCategory, bestseller } = req.body
 
         const image1 = req.files.image1 && req.files.image1[0]
         const image2 = req.files.image2 && req.files.image2[0]
@@ -27,8 +27,6 @@ const addProduct = async (req, res) => {
             price: Number(price),
             subCategory,
             bestseller: bestseller === "true" ? true : false,
-            sizes: JSON.parse(sizes),
-            // colour: JSON.parse(colour),
             image: imagesUrl,
             date: Date.now()
         }
