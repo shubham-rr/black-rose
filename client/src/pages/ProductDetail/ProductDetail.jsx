@@ -13,7 +13,7 @@ const ProductDetail = () => {
   const navigate = useNavigate();
   const { products, isLoading, error, getProductById } = useProducts();
   const [quantity, setQuantity] = useState(1);
-  
+
   const product = getProductById(id);
 
   const getBrandLogo = (brand) => {
@@ -63,40 +63,31 @@ const ProductDetail = () => {
               }}
             />
           </div>
-          
+
           {/* Product Info Section */}
           <div className="product-detail-info">
-            <nav className="product-detail-nav">
-              <Button 
-                variant="link" 
-                className="back-to-products-button"
-                onClick={() => navigate('/products')}
-              >
-                Go Back
-              </Button>
-            </nav>
 
-            
+
             <h1 className="product-detail-name">{product.name}</h1>
-            
+
             <div className="product-detail-brand">
               {getBrandLogo(product.brand) && (
-                  <img 
-                  src={getBrandLogo(product.brand)} 
+                <img
+                  src={getBrandLogo(product.brand)}
                   alt={product.brand}
                   className="product-detail-brand-img"
-                  />
-                )}
+                />
+              )}
             </div>
-            
+
             <ProductCategories categories={product.categories} />
             <div className="product-detail-price">
               ${product.price.toFixed(2)}
             </div>
-            
+
             <div className="product-detail-purchase-controls">
               <div className="product-detail-quantity-selector">
-                <button 
+                <button
                   onClick={() => setQuantity(Math.max(1, quantity - 1))}
                   className="product-detail-quantity-button"
                   aria-label="Decrease quantity"
@@ -104,7 +95,7 @@ const ProductDetail = () => {
                   <FiMinus />
                 </button>
                 <span className="product-detail-quantity-display">{quantity}</span>
-                <button 
+                <button
                   onClick={() => setQuantity(quantity + 1)}
                   className="product-detail-quantity-button"
                   aria-label="Increase quantity"
@@ -112,17 +103,29 @@ const ProductDetail = () => {
                   <FiPlus />
                 </button>
               </div>
-              
-              <Button 
-                variant="dark" 
-                size="lg" 
+
+              <Button
+                variant="dark"
+                size="lg"
                 className="product-detail-add-to-cart-button"
               >
                 Add to Cart
               </Button>
+              <nav className="product-detail-nav">
+                <Button
+                  variant="link"
+                  className="back-to-products-button"
+                  size='lg'
+                  onClick={() => navigate('/products')}
+                >
+                  View all products
+                </Button>
+              </nav>
             </div>
           </div>
         </div>
+
+
       </div>
     </>
   );
