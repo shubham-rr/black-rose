@@ -1,10 +1,11 @@
 .hero-section {
-  min-height: 80vh;
+  /* min-height: 80vh; */
   display: flex;
   align-items: center;
   position: relative;
   background: var(--hero-image) center/cover no-repeat;
   padding: 4rem 0;
+  z-index: -2;
 }
 
 .hero-overlay {
@@ -19,7 +20,7 @@
 .hero-content {
   padding: 2rem 0;
   position: relative;
-  z-index: 2;
+  z-index: 0;
 }
 
 .hero-title {

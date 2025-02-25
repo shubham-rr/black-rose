@@ -33,7 +33,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <Link to={`/products/${product.id}`}>
+    <Link to={`/products/${product._id}`}>
       <div className="product-card">
         <div className="product-content">
           <div className="product-image">

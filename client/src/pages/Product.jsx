@@ -1,23 +1,22 @@
 ﻿import React, {useContext, useEffect, useState} from 'react'
 import { useParams } from 'react-router-dom';
 import { ShopContext } from '../context/ShopContext';
+import RelatedProducts from '../components/RelatedProducts';
 
 
 const Product = () => {
 
     const {productId} = useParams();
-    const {products,currency,assets} = useContext(ShopContext);
+    const {products,currency,assets, addToCart} = useContext(ShopContext);
     const [productData, setProductData] = useState(false);
     const [image, setImage] = useState('');
 
     const fetchProductData = async () => {
-        console.log('fetchProductData called');
-        console.log('Products:', products);
+
         products.map((item)=>{
             if(item._id === productId){
                 setProductData(item)
                 setImage(item.image[0])
-                console.log(item);
                 
                 return null;
 
@@ -67,7 +66,11 @@ const Product = () => {
                 </div>
                 <p className='mt-5 text-3xl font-medium'>{currency}{productData.price}</p>
                 <p className='mt-5 text-gray-500 md:wd-4/5'> {productData.desc} </p>
-                <button className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+
+
+                <button onClick={()=>addToCart(productData._id)} className='bg-black text-white px-8 py-3 text-sm active:bg-gray-700'>ADD TO CART</button>
+                
+                
                 <hr className='mt-8 sm:w-4/5'/>
                 <div className='text-sm text-gray-500 mt-5 flex flex-col gap-1'>
                     <p>100% Original Product</p>
@@ -94,7 +97,7 @@ const Product = () => {
         </div>
 
         {/* Display related products */}
-        
+        <RelatedProducts brand={productData.brand} category={productData.category}/>
        
     </div>
   ) : <div className=''> </div>
