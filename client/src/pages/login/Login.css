@@ -1,0 +1,92 @@
+﻿/* Form container */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin: auto;
+    margin-top: 3.5rem;
+    gap: 1rem;
+    color: #4a4a4a; /* Gray text */
+  }
+  
+  /* Header container */
+  form .header-container {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-top: 2.5rem;
+  }
+  
+  /* Header text */
+  form .header-text {
+    font-family: 'Prata', serif; /* Assuming you use the Prata font */
+    font-size: 1.875rem; /* 3xl */
+  }
+  
+  /* Divider line */
+  form .divider {
+    border: none;
+    height: 1.5px;
+    width: 2rem;
+    background-color: #4a4a4a; /* Gray */
+  }
+  
+  /* Input fields */
+  form input {
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid #4a4a4a; /* Gray border */
+    border-radius: 4px;
+  }
+  
+  /* Links container */
+  form .links-container {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.875rem; /* Small text */
+    margin-top: -0.5rem;
+  }
+  
+  /* Link style */
+  form .link {
+    cursor: pointer;
+    text-decoration: underline;
+    color: inherit;
+  }
+  
+  /* Button */
+  form button {
+    background-color: black;
+    color: white;
+    font-weight: 300; /* Light */
+    padding: 0.5rem 2rem;
+    margin-top: 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  /* Button hover effect */
+  form button:hover {
+    opacity: 0.9;
+  }
+
+  .form-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(80vh); /* Adjust height dynamically */
+    padding: 2rem 1rem; /* Add padding around the form */
+  }
+  
+  /* Add any responsive styles if needed */
+  @media (min-width: 640px) {
+    form {
+      max-width: 24rem; /* sm:max-w-96 */
+    }
+  }
+  

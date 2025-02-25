@@ -18,8 +18,8 @@ function Landing() {
             {Object.entries(sections).map(([key, section]) => (
                 <FeaturedProducts 
                     key={key}
-                    title={section.title} 
-                    products={products.filter(section.filter).slice(0, 3)}
+                    title={section.title}
+                    products={products.filter(section.filter).slice(0, 4)}
                     // viewAllLink={section.viewAllLink} 
                 />
             ))}

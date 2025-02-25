@@ -5,6 +5,7 @@ import logos from "../../assets/brand-logos/brand-logos";
 import { Link } from 'react-router-dom';
 
 import "./ProductCard.css";
+import { Link } from "react-router-dom";
 
 const ProductCard = ({ product }) => {
   const getBrandLogo = (brand) => {
@@ -12,8 +13,8 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="product-card">
-      <Link to={`/product/${product.id}`}>
+    <Link to={`/products/${product.id}`}>
+      <div className="product-card">
         <div className="product-content">
           <div className="product-image">
             <img
@@ -34,14 +35,14 @@ const ProductCard = ({ product }) => {
             <p className="product-name">{product.name}</p>
           </div>
         </div>
-      </Link>
-      <div className="product-footer">
-        <p className="product-price">${product.price.toFixed(2)}</p>
-        <Button variant="dark" size="sm" className="action-button">
-          Add to Cart
-        </Button>
+        <div className="product-footer">
+          <p className="product-price">${product.price.toFixed(2)}</p>
+          <Button variant="dark" size="sm" className="action-button">
+            Add to Cart
+          </Button>
+        </div>
       </div>
-    </div>
+    </Link>
   );
 };
 
