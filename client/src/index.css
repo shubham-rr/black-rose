@@ -83,6 +83,14 @@ p {
   display: none;
 }
 
+.section-title {
+  text-align: left;
+  margin-bottom: 2rem;
+  font-size: 1.75rem;
+  font-weight: 600;
+  color: var(--text-dark);
+  font-family: var(--primary-font);
+}
 
 
 @media (max-width: 640px) {

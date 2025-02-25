@@ -7,11 +7,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'DSLR',
         image: ["https://2.img-dpreview.com/files/p/TS2400x2400~sample_galleries/3532780391/0590139745.jpg","https://preview.redd.it/opinions-on-nikon-zfc-v0-473h0ovbyy0d1.jpeg?width=1080&crop=smart&auto=webp&s=01c0f91fcac04c20146d412b422e520864d4a923","https://2.img-dpreview.com/files/p/TS2400x2400~sample_galleries/3532780391/0590139745.jpg","https://preview.redd.it/opinions-on-nikon-zfc-v0-473h0ovbyy0d1.jpeg?width=1080&crop=smart&auto=webp&s=01c0f91fcac04c20146d412b422e520864d4a923"],
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam2",
@@ -22,12 +21,11 @@ export const products = [
         category: 'DSLR',
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://preview.redd.it/opinions-on-nikon-zfc-v0-473h0ovbyy0d1.jpeg?width=1080&crop=smart&auto=webp&s=01c0f91fcac04c20146d412b422e520864d4a923",
-        categories: {
-            newArrival: true,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://preview.redd.it/opinions-on-nikon-zfc-v0-473h0ovbyy0d1.jpeg?width=1080&crop=smart&auto=webp&s=01c0f91fcac04c20146d412b422e520864d4a923"],
+        newArrival: true,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam3",
@@ -36,12 +34,11 @@ export const products = [
         price: 2499.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2021/10/Sony_A7_IV_in-hand-PA180998-acr.jpg?resize=1536,1024",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2021/10/Sony_A7_IV_in-hand-PA180998-acr.jpg?resize=1536,1024"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam4",
@@ -50,12 +47,11 @@ export const products = [
         price: 1699.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2403957348/DSC_0595.acr.jpeg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2403957348/DSC_0595.acr.jpeg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam5",
@@ -64,12 +60,11 @@ export const products = [
         price: 2799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2023/06/Canon_EOS_R6_Mark_II-01.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2023/06/Canon_EOS_R6_Mark_II-01.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam6",
@@ -78,12 +73,11 @@ export const products = [
         price: 2999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2020/12/DSC_8599.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2020/12/DSC_8599.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam7",
@@ -92,12 +86,11 @@ export const products = [
         price: 1999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.thephoblographer.com/wp-content/uploads/2023/05/Hillary-Grigonis-The-Phoblographer-Panasonic-S5-IIx-review-DSCF1002-scaled.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.thephoblographer.com/wp-content/uploads/2023/05/Hillary-Grigonis-The-Phoblographer-Panasonic-S5-IIx-review-DSCF1002-scaled.jpg"],
+        newArrival: true,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam8",
@@ -106,12 +99,11 @@ export const products = [
         price: 5999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://d13s5rafcqkqiu.cloudfront.net/CACHE/images/products/compact-camera/tba/176383_leica-q2-monochrom_bY6V5j_9-auto/a61bc9a419faba158ca7c5c873c4d094.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://d13s5rafcqkqiu.cloudfront.net/CACHE/images/products/compact-camera/tba/176383_leica-q2-monochrom_bY6V5j_9-auto/a61bc9a419faba158ca7c5c873c4d094.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam9",
@@ -120,12 +112,11 @@ export const products = [
         price: 1799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2020/01/DSCF0117.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2020/01/DSCF0117.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam10",
@@ -135,11 +126,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'Action Camera',
         image: ["https://static1.pocketlintimages.com/wordpress/wp-content/uploads/161297-cameras-review-gopro-hero-10-black-review-image2-pibqlf4iol.jpg"],
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam11",
@@ -148,12 +138,11 @@ export const products = [
         price: 349.00,
         desc:'Lorem opsium',
         category: 'Drone',
-        image: "https://www.newsshooter.com/wp-content/uploads/2020/10/DSC_2825-scaled.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.newsshooter.com/wp-content/uploads/2020/10/DSC_2825-scaled.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam12",
@@ -162,12 +151,11 @@ export const products = [
         price: 749.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://farm1.static.flickr.com/195/481924493_55660ac970.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://farm1.static.flickr.com/195/481924493_55660ac970.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam13",
@@ -176,12 +164,11 @@ export const products = [
         price: 1299.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2019/09/Sony-RX100-VII-14.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2019/09/Sony-RX100-VII-14.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam14",
@@ -190,12 +177,11 @@ export const products = [
         price: 1399.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.cameralabs.com/wp-content/uploads/2017/01/PanaGH5_hero3_3840-1920x1311.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.cameralabs.com/wp-content/uploads/2017/01/PanaGH5_hero3_3840-1920x1311.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam15",
@@ -204,12 +190,11 @@ export const products = [
         price: 5999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2023/09/Fujifilm_GFX100_II-02-DSCF1568-acr.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2023/09/Fujifilm_GFX100_II-02-DSCF1568-acr.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam16",
@@ -218,12 +203,11 @@ export const products = [
         price: 8399.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2020/07/Leica-M10-R-21.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2020/07/Leica-M10-R-21.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam17",
@@ -232,12 +216,11 @@ export const products = [
         price: 2999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.ephotozine.com/articles/nikon-d850-full-review-31314/images/xlg_highres-Nikon-D850-with-lens_1503509096.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.ephotozine.com/articles/nikon-d850-full-review-31314/images/xlg_highres-Nikon-D850-with-lens_1503509096.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam18",
@@ -246,12 +229,11 @@ export const products = [
         price: 6499.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2677095861/DSC_0764.acr.jpeg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2677095861/DSC_0764.acr.jpeg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam19",
@@ -260,12 +242,11 @@ export const products = [
         price: 3899.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2020/12/CanonEOSR5_online1.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2020/12/CanonEOSR5_online1.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam20",
@@ -274,12 +255,11 @@ export const products = [
         price: 649.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://amateurphotographer.com/wp-content/uploads/sites/7/2021/09/Panasonic_Lumix_G100-04.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://amateurphotographer.com/wp-content/uploads/sites/7/2021/09/Panasonic_Lumix_G100-04.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam21",
@@ -288,12 +268,11 @@ export const products = [
         price: 4999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://overgaard.dk/thorstenovergaardcom_copyrighted_graphics/Leica_SL2_silver_640w-overgaard.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://overgaard.dk/thorstenovergaardcom_copyrighted_graphics/Leica_SL2_silver_640w-overgaard.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam22",
@@ -303,11 +282,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'Action Camera',
         image: ["https://www.digitaltrends.com/wp-content/uploads/2019/11/gopro-max-review-dm-4.jpg?fit=1500%2C1000&p=1"],
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam23",
@@ -316,12 +294,11 @@ export const products = [
         price: 2299.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.nikon.com.au/media/wysiwyg/DSLRD780/Tilt-Touchscreen.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.nikon.com.au/media/wysiwyg/DSLRD780/Tilt-Touchscreen.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam24",
@@ -330,12 +307,11 @@ export const products = [
         price: 899.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam25",
@@ -344,12 +320,11 @@ export const products = [
         price: 749.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.usa.canon.com/4002",
-        categories: {
-            newArrival: true,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.usa.canon.com/4002"],
+        newArrival: true,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam26",
@@ -358,12 +333,11 @@ export const products = [
         price: 1399.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/7159506762/DSCF3615.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/7159506762/DSCF3615.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam27",
@@ -372,12 +346,11 @@ export const products = [
         price: 799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.olympus-global.com/products/cameras/pen-e-pl9-1/images/overview.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.olympus-global.com/products/cameras/pen-e-pl9-1/images/overview.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam28",
@@ -387,11 +360,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'Action Camera',
         image: ["https://www.gopro.com/content/dam/gopro/video/hero9_black/overview/hero9_black_2_640.jpg"],
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam29",
@@ -400,12 +372,11 @@ export const products = [
         price: 2599.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/1381911193/DSC00389.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/1381911193/DSC00389.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam30",
@@ -414,12 +385,11 @@ export const products = [
         price: 1799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam31",
@@ -428,12 +398,11 @@ export const products = [
         price: 1999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/z6ii.html",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/z6ii.html"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam32",
@@ -442,12 +411,11 @@ export const products = [
         price: 1299.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2343953342/Product/lumix-fz2500.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2343953342/Product/lumix-fz2500.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam33",
@@ -456,12 +424,11 @@ export const products = [
         price: 1499.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.olympus-global.com/products/cameras/pen-f-1/images/overview.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.olympus-global.com/products/cameras/pen-f-1/images/overview.jpg"],
+        newArrival: true,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam34",
@@ -470,12 +437,11 @@ export const products = [
         price: 1199.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.usa.canon.com/4002",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.usa.canon.com/4002"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam35",
@@ -484,12 +450,11 @@ export const products = [
         price: 899.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6334/6334297_sd.jpg;maxHeight=2000;maxWidth=2000;format=webp",
-        categories: {
-            newArrival: true,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6334/6334297_sd.jpg;maxHeight=2000;maxWidth=2000;format=webp"],
+        newArrival: true,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam36",
@@ -498,12 +463,11 @@ export const products = [
         price: 3199.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam37",
@@ -513,11 +477,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'Action Camera',
         image: ["https://www.gopro.com/content/dam/gopro/video/hero7-black/overview/hero7_black_640.jpg"],
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam38",
@@ -526,12 +489,11 @@ export const products = [
         price: 4799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/7249853640/DSC0185.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/7249853640/DSC0185.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam39",
@@ -540,12 +502,11 @@ export const products = [
         price: 1699.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d500.html",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d500.html"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam40",
@@ -554,12 +515,11 @@ export const products = [
         price: 4499.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam41",
@@ -568,12 +528,11 @@ export const products = [
         price: 1799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/4080951026/DSCF4657.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/4080951026/DSCF4657.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam42",
@@ -582,12 +541,11 @@ export const products = [
         price: 1699.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.lumix-lounge.com/wp-content/uploads/2020/01/Lumix-GH5.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.lumix-lounge.com/wp-content/uploads/2020/01/Lumix-GH5.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam43",
@@ -596,12 +554,11 @@ export const products = [
         price: 1799.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.olympus-global.com/products/cameras/om-d-e-m1-mark-iii-1/images/overview.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.olympus-global.com/products/cameras/om-d-e-m1-mark-iii-1/images/overview.jpg"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam44",
@@ -610,12 +567,11 @@ export const products = [
         price: 1299.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2643898571/DSCF2131.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2643898571/DSCF2131.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam45",
@@ -625,11 +581,10 @@ export const products = [
         desc:'Lorem opsium',
         category: 'Action Camera',
         image: ["https://www.gopro.com/content/dam/gopro/video/hero6-black/overview/hero6_black_640.jpg"],
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam46",
@@ -638,12 +593,11 @@ export const products = [
         price: 1999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: true
-        }
+        image: ["https://www.sony.com/image/3c68d92769c5d9f25b65eb1f77eb2f9c?fmt=jpeg&wid=1200&hei=1200&qlt=85&resMode=sharp2"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: true
+
     },
     {
         _id: "cam47",
@@ -652,12 +606,11 @@ export const products = [
         price: 1299.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d7500.html",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: true
-        }
+        image: ["https://www.nikonusa.com/en/nikon-products/product/dslr-cameras/d7500.html"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: true
+
     },
     {
         _id: "cam48",
@@ -666,12 +619,11 @@ export const products = [
         price: 599.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.usa.canon.com/4002",
-        categories: {
-            newArrival: false,
-            hotDeal: true,
-            popularItem: false
-        }
+        image: ["https://www.usa.canon.com/4002"],
+        newArrival: false,
+        hotDeal: true,
+        popularItem: false
+
     },
     {
         _id: "cam49",
@@ -680,12 +632,11 @@ export const products = [
         price: 4499.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/1914974029/Product/fujifilm-gfx-50r.jpg",
-        categories: {
-            newArrival: false,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.dpreview.com/files/p/articles/1914974029/Product/fujifilm-gfx-50r.jpg"],
+        newArrival: false,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam50",
@@ -694,12 +645,11 @@ export const products = [
         price: 8999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2330291530/DSC00631.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2330291530/DSC00631.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     },
     {
         _id: "cam51",
@@ -708,12 +658,11 @@ export const products = [
         price: 8999.00,
         desc:'Lorem opsium',
         category: 'DSLR',
-        image: "https://www.dpreview.com/files/p/articles/2330291530/DSC00631.jpg",
-        categories: {
-            newArrival: true,
-            hotDeal: false,
-            popularItem: false
-        }
+        image: ["https://www.dpreview.com/files/p/articles/2330291530/DSC00631.jpg"],
+        newArrival: true,
+        hotDeal: false,
+        popularItem: false
+
     }
 ];
 

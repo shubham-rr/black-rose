@@ -13,6 +13,8 @@ import Navbar from './components/Navbar';
 import Cart from './pages/Cart';
 import PlaceOrder from './pages/PlaceOrder';
 import Orders from './pages/Order';
+import Products from './pages/Products';
+import SearchBar from './components/SearchBar';
 
 
 const App = () => {
@@ -24,8 +26,10 @@ const App = () => {
             />
       <ToastContainer />
       <Navbar />
+      <SearchBar />
       <Routes>
         <Route path="/" element={<Landing />} />
+        <Route path="/collection" element={<Products />} />
         <Route path="/products" element={<ProductsPage />} />
         <Route path="/products/:productId" element={<Product />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />

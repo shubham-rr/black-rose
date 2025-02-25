@@ -17,8 +17,8 @@ const Add = ({token}) => {
   const [description, setDescription] = useState('');
   const [price, setPrice] = useState('');
   const [category, setCategory] = useState('Camera');
-  const [subCategory, setSubCategory] = useState('Other');
-  const [bestSeller, setBestSeller] = useState(false);
+  const [brand, setBrand] = useState('Other');
+  const [popularItem, setPopularItem] = useState(false);
   const [sizes,setSizes] = useState([]);
 
 
@@ -34,8 +34,8 @@ const Add = ({token}) => {
       formData.append("description",description)
       formData.append("price",price)
       formData.append("category",category)
-      formData.append("subCategory",subCategory)
-      formData.append("bestSeller",bestSeller)
+      formData.append("brand",brand)
+      formData.append("popularItem",popularItem)
       formData.append("sizes",JSON.stringify(sizes))
 
       image1 && formData.append("image1",image1)
@@ -49,7 +49,7 @@ const Add = ({token}) => {
         toast.success(response.data.message)
         setName('')
         setDescription('')
-        setBestSeller(false)
+        setPopularItem(false)
         setSizes([])
         setImage1(false)
         setImage2(false)
@@ -112,16 +112,23 @@ const Add = ({token}) => {
           <select onChange={(e)=>setCategory(e.target.value)} className='w-full px-3 py-2'>
             <option value="Camera">Camera</option>
             <option value="Drone">Drone</option>
-            <option value="Accessories">Lens</option>
+            <option value="Accessories">Action Camera</option>
           </select>
         </div>
 
         <div>
-          <p className='mb-2'>Sub-Category</p>
-          <select onChange={(e)=>setSubCategory(e.target.value)} className='w-full px-3 py-2'>
-            <option value="Bags">Bags</option>
-            <option value="Lens">Lens</option>
-            <option value="Other">Other</option>
+          <p className='mb-2'>Brand</p>
+          <select onChange={(e)=>setBrand(e.target.value)} className='w-full px-3 py-2'>
+            <option value="Canon">Canon</option>
+            <option value="Dji">Dji</option>
+            <option value="Fujifilm">Fujifilm</option>
+            <option value="GoPro">GoPro</option>
+            <option value="Leica">Leica</option>
+            <option value="Nikon">Nikon</option>
+            <option value="Olympus">Olympus</option>
+            <option value="Panasonic">Panasonic</option>
+            <option value="Sony">Sony</option>
+            
           </select>
         </div>
 
@@ -141,30 +148,10 @@ const Add = ({token}) => {
         <input onChange={(e)=>setPrice(e.target.value)} value={price} className='w-full px-3 py-2 sm:w-[120px]' type="number" />
       </div>
 
-      <div>
-        <p className='mb-2'>Product Sizes</p>
-        <div className='flex gap-3'>
-          <div onClick={()=>setSizes(prev => prev.includes("S") ? prev.filter( item => item !== "S") : [...prev,"S"])}>
-            <p className={`${sizes.includes("S") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>S</p>
-          </div>
-          
-          <div onClick={()=>setSizes(prev => prev.includes("M") ? prev.filter( item => item !== "M") : [...prev,"M"])}>
-            <p className={`${sizes.includes("M") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>M</p>
-          </div>
-
-          <div onClick={()=>setSizes(prev => prev.includes("L") ? prev.filter( item => item !== "L") : [...prev,"L"])}>
-            <p className={`${sizes.includes("L") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>L</p>
-          </div>
-
-          <div onClick={()=>setSizes(prev => prev.includes("XL") ? prev.filter( item => item !== "XL") : [...prev,"XL"])}>
-            <p className={`${sizes.includes("XL") ? "bg-pink-100" : "bg-slate-200" } px-3 py-1 cursor-pointer`}>XL</p>
-          </div>
-        </div>
-      </div>
 
       <div className='flex gap-2 mt-2'>
-        <input onChange={()=> setBestSeller (prev => !prev)} checked={bestSeller} type="checkbox" id="bestseller" />
-        <label className='cursor-pointer' htmlFor="bestseller">Add to Best Seller</label> 
+        <input onChange={()=> setPopularItem (prev => !prev)} checked={popularItem} type="checkbox" id="popularItem" />
+        <label className='cursor-pointer' htmlFor="popularItem">Add to Popular Items</label> 
       </div>
 
 
