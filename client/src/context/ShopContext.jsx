@@ -37,6 +37,18 @@ const ShopContextProvider = (props) => {
             cartData[itemId] = 1;
         }
         setCartItems(cartData);
+
+        if (token) {
+            try {
+                
+                await axios.post(backendUrl+'/api/cart/add', {itemId}, {headers: {token}});
+            } catch (error) {
+                console.log(error);
+                toast.error(error.message);
+                
+            }
+            
+        }
     }
 
     const getCartCount = () => {
@@ -47,11 +59,32 @@ const ShopContextProvider = (props) => {
         return totalCount;
     };
 
-    const updateQuantity = (itemId, quantity) => {
+    const updateQuantity = async (itemId, quantity) => {
         let cartData = structuredClone(cartItems);
         cartData[itemId] = quantity;
         setCartItems(cartData);
+
+        if (token) {
+            try {
+                await axios.post(backendUrl+'/api/cart/update', {itemId, quantity}, {headers: {token}});
+            } catch (error) {
+                console.log(error)
+                res.json({success:false, message:error.message})
+            }
+        }
+
     };
+
+    const getUserCart = async( token ) =>{
+        const response = await axios.post(backendUrl+'/api/cart/get',{}, {headers: {token}});
+        if(response.data.success){
+            setCartItems(response.data.cartData);
+        } else {
+            console.log(error);
+            
+            toast.error(response.data.message);
+        }
+    }
 
     const getCartAmount = () => {
         let totalAmount = 0;
@@ -67,7 +100,6 @@ const ShopContextProvider = (props) => {
     const getProductsData = async () => {
         try {
             const response = await axios.get(backendUrl+'/api/product/list');
-            console.log(response.data);
             if(response.data.success){
                 setProducts(response.data.products);
             } else {
@@ -89,6 +121,7 @@ const ShopContextProvider = (props) => {
     useEffect(()=>{
         if (!token && localStorage.getItem('token')) {
             setToken(localStorage.getItem('token'))
+            getUserCart(localStorage.getItem('token'));
             
         } else {
             
@@ -97,7 +130,7 @@ const ShopContextProvider = (props) => {
 
     const value = {
         products, currency, delivery_fee,assets, cartItems,
-        addToCart, getCartCount, updateQuantity, getCartAmount,
+        addToCart, getCartCount, updateQuantity, getCartAmount, setCartItems,
         navigate, backendUrl,showSearch, setShowSearch, search, setSearch,
         token, setToken
     };

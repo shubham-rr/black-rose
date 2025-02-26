@@ -29,8 +29,8 @@ const App = () => {
       <SearchBar />
       <Routes>
         <Route path="/" element={<Landing />} />
-        <Route path="/collection" element={<Products />} />
-        <Route path="/products" element={<ProductsPage />} />
+        {/* <Route path="/collection" element={<Products />} /> */}
+        <Route path="/products" element={<Products />} />
         <Route path="/products/:productId" element={<Product />} />
         <Route path="/shopping-cart" element={<ShoppingCart />} />
         {/* <Route path="/search" element={<SearchPage />} /> */}

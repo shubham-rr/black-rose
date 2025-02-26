@@ -50,7 +50,7 @@
   --shadow-lg: 0 10px 15px rgba(0, 0, 0, 0.05);
 }
 
-a.active.hr{
+a.active hr{
   display: block !important; 
 }
 
@@ -64,20 +64,20 @@ a.active.hr{
 body {
   font-family: var(--primary-font);
   color: var(--text-dark);
-  line-height: 1.5;
+  /* line-height: 1.5; */
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-h1, h2, h3, h4, h5, h6 {
+/* h1, h2, h3, h4, h5, h6 {
   font-family: var(--primary-font);
   font-weight: 500;
   color: var(--text-dark);
-}
+} */
 
-p {
+/* p {
   color: var(--text-medium);
-}
+} */
 
 ::-webkit-scrollbar {
   display: none;
