@@ -141,7 +141,7 @@ const Products = () => {
         </div>
         {/* Products */}
         <div className='flex-1'>
-            <div className='flex justify-between text-base sm:text-2xl ml-4 mb-3'>
+            <div className='flex justify-between text-base sm:text-2xl ml- mb-3'>
             <Title text1={"ALL"} text2={"PRODUCTS"} />
 
             {/* Product Sort */}

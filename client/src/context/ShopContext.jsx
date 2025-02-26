@@ -17,6 +17,7 @@ const ShopContextProvider = (props) => {
     const [search,setSearch] = useState('');
     const[token,setToken] = useState('')
     const [showSearch, setShowSearch] = useState(false);
+    const [brandFilter, setBrandFilter] = useState([]);
 
     const navigate = useNavigate();
 
@@ -123,16 +124,22 @@ const ShopContextProvider = (props) => {
             setToken(localStorage.getItem('token'))
             getUserCart(localStorage.getItem('token'));
             
-        } else {
-            
         }
     })
+
+    const applyBrandFilter = (brand) => {
+        setBrandFilter([brand]);
+        navigate('/products');
+    };
+
+
+    
 
     const value = {
         products, currency, delivery_fee,assets, cartItems,
         addToCart, getCartCount, updateQuantity, getCartAmount, setCartItems,
         navigate, backendUrl,showSearch, setShowSearch, search, setSearch,
-        token, setToken
+        token, setToken, applyBrandFilter, brandFilter
     };
 
     return (
