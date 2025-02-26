@@ -1,24 +1,21 @@
-import { Routes, Route } from 'react-router-dom';
+import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import "./App.css";
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
-import ProductsPage from './pages/ProductsPage/ProductsPage';
+import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import SearchPage from "./pages/search/SearchPage";
 import ContactUs from "./pages/contact/ContactUs";
-import Login from './pages/login/Login';
-import Product from './pages/Product';
-
+import Login from "./pages/login/Login";
+import Product from "./pages/Product";
+import AboutUs from "./pages/AboutUs/AboutUs";
 
 function App() {
   return (
     <>
-      <ScrollToTop 
-                smooth={true}
-                style={{ backgroundColor: 'var(--accent)' }} 
-            />
+      <ScrollToTop smooth={true} style={{ backgroundColor: "var(--accent)" }} />
       <Header />
       <Routes>
         <Route path="/" element={<Landing />} />
@@ -28,6 +25,7 @@ function App() {
         <Route path="/search" element={<SearchPage />} />
         <Route path="/contact-us" element={<ContactUs />} />
         <Route path="/login" element={<Login />} />
+        <Route path="/about-us" element={<AboutUs />} />
       </Routes>
       <Footer />
     </>
