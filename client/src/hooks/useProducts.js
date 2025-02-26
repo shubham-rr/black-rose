@@ -7,8 +7,10 @@ export const useProducts = () => {
   const [error, setError] = useState(null);
 
   useEffect(() => {
+    // Simulate API call with mock data
     const fetchProducts = async () => {
       try {
+        // Simulate network delay
         await new Promise(resolve => setTimeout(resolve, 500));
         setProductData(products);
         setIsLoading(false);
@@ -21,9 +23,5 @@ export const useProducts = () => {
     fetchProducts();
   }, []);
 
-  const getProductById = (id) => {
-    return productData.find(product => product.id === id);
-  };
-
-  return { products: productData, isLoading, error, getProductById };
-};
+  return { products: productData, isLoading, error };
+}; 
