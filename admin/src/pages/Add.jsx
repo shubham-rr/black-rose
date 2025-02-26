@@ -4,8 +4,6 @@ import axios from 'axios'
 import { backendUrl } from '../App'
 import { toast } from 'react-toastify'
 
-
-
 const Add = ({token}) => {
 
   const [image1,setImage1] = useState(false)
@@ -138,9 +136,15 @@ const Add = ({token}) => {
             <option value="Canon">Canon</option>
             <option value="Nikon">Nikon</option>
             <option value="DJI">DJI</option>
+            <option value="FujiFilm">FujiFilm</option>
+            <option value="Olympus">Olympus</option>
+            <option value="SONY">SONY</option>
+            <option value="Leica">Leica</option>
+            <option value="Panasonic">Panasonic</option>
+            <option value="GoPro">GoPro</option>
             <option value="Other">Other</option>
           </select>
-        </div> */}
+        </div>
       </div>
 
       <div>
@@ -153,7 +157,6 @@ const Add = ({token}) => {
         <input onChange={()=> setPopularItem (prev => !prev)} checked={popularItem} type="checkbox" id="popularItem" />
         <label className='cursor-pointer' htmlFor="popularItem">Add to Popular Items</label> 
       </div>
-
 
       <button type="submit" className='w-28 py-3 mt-4 bg-black text-white'>Add</button>
 
