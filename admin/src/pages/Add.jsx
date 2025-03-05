@@ -110,7 +110,7 @@ const Add = ({token}) => {
           <select onChange={(e)=>setCategory(e.target.value)} className='w-full px-3 py-2'>
             <option value="Camera">Camera</option>
             <option value="Drone">Drone</option>
-            <option value="Accessories">Action Camera</option>
+            <option value="Action Camera">Action Camera</option>
           </select>
         </div>
 
@@ -130,21 +130,6 @@ const Add = ({token}) => {
           </select>
         </div>
 
-        {/* <div>
-          <p className='mb-2'>Brand</p>
-          <select >
-            <option value="Canon">Canon</option>
-            <option value="Nikon">Nikon</option>
-            <option value="DJI">DJI</option>
-            <option value="FujiFilm">FujiFilm</option>
-            <option value="Olympus">Olympus</option>
-            <option value="SONY">SONY</option>
-            <option value="Leica">Leica</option>
-            <option value="Panasonic">Panasonic</option>
-            <option value="GoPro">GoPro</option>
-            <option value="Other">Other</option>
-          </select>
-        </div>
       </div>
 
       <div>

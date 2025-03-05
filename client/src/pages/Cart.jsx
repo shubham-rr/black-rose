@@ -2,10 +2,11 @@
 import { ShopContext } from '../context/ShopContext';
 import Title from '../components/Title';
 import CartTotal from '../components/CartTotal';
+import { assets } from "../assets/assets"
 
 const Cart = () => {
 
-    const { products, currency, assets, cartItems, updateQuantity, getCartAmount, navigate } = useContext(ShopContext);
+    const { products, currency, cartItems, updateQuantity, getCartAmount, navigate } = useContext(ShopContext);
 
     const [cartData, setCartData] = useState([]);
 
