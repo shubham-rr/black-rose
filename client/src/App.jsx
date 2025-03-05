@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 import ScrollToTop from "react-scroll-to-top";
 import Footer from "./components/Footer/Footer";
 import Landing from "./pages/Landing/Landing";
-import ProductsPage from "./pages/ProductsPage/ProductsPage";
+// import ProductsPage from "./pages/ProductsPage/ProductsPage";
 import ShoppingCart from "./pages/ShoppingCart/ShoppingCart";
 import ContactUs from "./pages/contact/ContactUs";
 import Login from "./pages/Login";
