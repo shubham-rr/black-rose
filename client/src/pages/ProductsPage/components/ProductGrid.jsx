@@ -1,5 +1,5 @@
 import { Row, Col } from 'react-bootstrap';
-import ProductCard from '../../../components/ProductCard/ProductCard';
+import ProductCard from '../../../components/ProductCard';
 import { useProducts } from '../../../hooks/useProducts';
 
 const ProductGrid = ({ filters, searchQuery, sortBy }) => {
@@ -52,7 +52,7 @@ const ProductGrid = ({ filters, searchQuery, sortBy }) => {
   return (
     <>
       <Row xs={1} md={2} lg={3} className="g-4">
-        {sortedProducts.map(product => (
+        {sortedProducts.map((product) => (
           <Col key={product.id}>
             <ProductCard product={product} />
           </Col>

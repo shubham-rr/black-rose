@@ -1,10 +1,11 @@
-.hero-section {
+/* .hero-section {
   min-height: 80vh;
   display: flex;
   align-items: center;
   position: relative;
   background: var(--hero-image) center/cover no-repeat;
   padding: 4rem 0;
+  z-index: -2;
 }
 
 .hero-overlay {
@@ -18,6 +19,32 @@
 
 .hero-content {
   padding: 2rem 0;
+  position: relative;
+  z-index: 0;
+} */
+
+.hero-section {
+  position: relative;
+  background-image: var(--hero-image);
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.hero-content {
   position: relative;
   z-index: 2;
 }
@@ -50,6 +77,8 @@
 .hero-button {
   text-decoration: none;
   margin-right: 1rem;
+  z-index: 3;
+  position: relative;
 }
 
 .hero-cta .btn {
